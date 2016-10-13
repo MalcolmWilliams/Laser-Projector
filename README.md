@@ -1,4 +1,4 @@
-# Laser-Projector
+Laser-Projector
 
 r=1000 # THIS MUST BE THE FIRST LINE IN THE FILE!
 The "r=number" command sets the speed in points per second (pps) at which samples are displayed by the Lasershark. 
