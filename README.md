@@ -1,16 +1,10 @@
 # Laser-Projector
 
-r=1000 # THIS MUST BE THE FIRST LINE IN THE FILE! 
+r=1000 # THIS MUST BE THE FIRST LINE IN THE FILE!
 The "r=number" command sets the speed in points per second (pps) at which samples are displayed by the Lasershark. 
 The pps speed can be set to any integer between 1 and the maximum value as reported by the Lasershark (64000)   
 You should not set this value to be greater than what your galvos are capable of operating at.
 Failure to adhere to this guidance can result in galvo damage or decreased lifespan.
-
-!!!!!!!!!!!!!!!!!!!!!!!!!DO NOT ATTEMPT TO RUN THIS FILE!!!!!!!!!!!!!!!!!!!!!!!!!
-THIS FILE IS INTENDED DEMONSTRATE THE lasershark_stdin COMMAND FORMAT ONLY!
-!!!!!!!!!!!!!!!!!!!!!!!!!DO NOT ATTEMPT TO RUN THIS FILE!!!!!!!!!!!!!!!!!!!!!!!!!
-Comment lines start with a "#". These are ignored.
-Command lines may also have comments appended to their ends using the "#" symbol.
 
 e=1 
 The "e=" command sets the output enable state of the Lasershark. The output enable status must be set for any
@@ -33,4 +27,5 @@ Samples are queued until they fill a full lasershark packet and are then written
 This means that to ensure ALL samples are written out, a flush should be performed once all desired samples are 
 written out.
 
-f=1 # Flushes all samples. It is reccomended to stick this at the end of your output file to ensure all samples are displayed. 
+f=1
+Flushes all samples. It is reccomended to stick this at the end of your output file to ensure all samples are displayed. 
