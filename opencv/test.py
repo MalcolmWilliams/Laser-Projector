@@ -17,9 +17,44 @@ def get_contours(im):
     
     return contours
 
-#def make_output(contours, shape):
-    #convert the contours array to a style that is appropriate for laser display. 
+def format_on(coord):
+    return "s=" + str(coord[0])+ "," + str(coord[1]) + ",4095,0,0,0"
 
+def format_off(coord):
+    return "s=" + str(coord[0])+ "," + str(coord[1]) + ",0,0,0,0"
+
+def make_output(contours, shape):
+    #know the shape of the array so it can be scaled to the right output (0 to 4095)
+    arr = np.array("s=0,0,0,0,0,0")
+
+    scale = shape[0] if shape[0] > shape[1] else shape[1]
+    scale = 4095/scale
+    contours[:] = [c * scale for c in contours]
+    
+    #perform appropriate size reduction
+ 
+    #convert the contours array to a style that is appropriate for laser display. 
+    for loop in contours: #this returns the individual shape. light must be on for the entire time, then off as it switches to the next shape. 
+        #print loop
+        #print loop[0]
+        #print loop[0][0]
+        arr = np.append(arr, format_off(loop[0][0]))
+        for point in loop:
+            arr = np.append(arr, format_on(point[0]))
+
+    return arr
+
+def init_laser():
+    print "r=20000"
+    print "e=1"
+
+def draw_shape(arr):
+    for a in arr:
+        print a
+
+def exit_laser():
+    print "e=0"
+    #print "f=1"
 
 if(__name__ == "__main__"):
     #im = cv2.imread('square.png')
@@ -30,19 +65,28 @@ if(__name__ == "__main__"):
 
     contours = get_contours(im)
 
+    arr = make_output(contours, im.shape)
+
+    init_laser()
+    for i in range(100):
+        draw_shape(arr)
+    #draw_shape(arr) for i in range 100
+    exit_laser()
+
     img = np.ones(im.shape)#how to get size of original image.
     cv2.drawContours(img, contours, -1, (0, 0, 255), 1)
 
+    '''
     for c in contours:
         print c
         print "\n"
-
+    
 
     cv2.imshow("img", img)
     cv2.imshow ("im", im)
     #cv2.imshow("im2", im2)
     cv2.waitKey(0)
-
+    '''
 
 
 '''
@@ -65,7 +109,8 @@ e=1
 # The "e=" command sets the output enable state of the Lasershark. The output enable status must be set for any
 # laser or galvo control to occur.
 #       "e=1" == enable
-#       "e=0" == disable
+
+    print max_dim#       "e=0" == disable
 #
 p=Prints a text string to the console
 #
