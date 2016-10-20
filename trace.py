@@ -11,11 +11,19 @@ def get_contours(im):
     imgray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
     ret,thresh = cv2.threshold(imgray,127,255,0)
     im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-
+    
+    approx = []
+    
+    for cnt in contours:
+        #simplify the contours
+        #epsilon = 0.005*cv2.arcLength(cnt,True)
+        epsilon = 2
+        approx.append(cv2.approxPolyDP(cnt,epsilon,True))
+    
     #delete the image outline   #this is obselete now. 
     #contours = np.delete(contours, (0), axis=0)
     
-    return contours
+    return approx 
 
 def format_on(coord):
     return "s=" + str(coord[0])+ "," + str(coord[1]) + ",4095,0,0,0"
@@ -28,8 +36,9 @@ def make_output(contours, shape):
     arr = np.array("s=0,0,0,0,0,0")
 
     scale = shape[0] if shape[0] > shape[1] else shape[1]
-    scale = 4095/scale
-    contours[:] = [c * scale for c in contours]
+    
+    scale = 2000/scale
+    contours[:] = [c * scale + 1000 for c in contours]
     
     #perform appropriate size reduction
  
@@ -42,14 +51,24 @@ def make_output(contours, shape):
         for point in loop:
             arr = np.append(arr, format_on(point[0]))
 
+    
+
     return arr
 
 def init_laser():
-    print "r=20000"
+    print "r=2000"
     print "e=1"
 
 def draw_shape(arr):
+    i=0
+
     for a in arr:
+        '''
+        i+=1
+        if (i == 5):
+            print a
+            i = 0
+        '''
         print a
 
 def exit_laser():
@@ -59,34 +78,38 @@ def exit_laser():
 if(__name__ == "__main__"):
     #im = cv2.imread('square.png')
     im = cv2.imread('hello.jpeg')
+    #im = cv2.imread('hello1.jpg')
     #im = cv2.imread('circles.jpeg')
     #im = cv2.imread('circles2.png')
     #im = cv2.imread('test.jpg')
 
     contours = get_contours(im)
 
-    arr = make_output(contours, im.shape)
 
+    img = np.ones(im.shape)#how to get size of original image.
+    cv2.drawContours(img, contours, -1, (0, 0, 255), 1)
+    cv2.imshow("img", img)
+    #cv2.waitKey(0)
+
+    arr = make_output(contours, im.shape)
+    
+    #print len(arr)
+    
+    
     init_laser()
     for i in range(100):
         draw_shape(arr)
     #draw_shape(arr) for i in range 100
     exit_laser()
-
+    
     img = np.ones(im.shape)#how to get size of original image.
     cv2.drawContours(img, contours, -1, (0, 0, 255), 1)
 
-    '''
-    for c in contours:
-        print c
-        print "\n"
     
-
-    cv2.imshow("img", img)
     cv2.imshow ("im", im)
     #cv2.imshow("im2", im2)
     cv2.waitKey(0)
-    '''
+    ''''''
 
 
 '''
