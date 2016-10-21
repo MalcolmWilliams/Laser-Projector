@@ -32,53 +32,45 @@ def format_off(coord):
     return "s=" + str(coord[0])+ "," + str(coord[1]) + ",0,0,0,0"
 
 def make_output(contours, shape):
-    #know the shape of the array so it can be scaled to the right output (0 to 4095)
-    arr = np.array("s=0,0,0,0,0,0")
+    output_size = 4000
+    output_offset = 0   #be able to choose the range taken up.
+
+    #know the size of the image so it can be scaled to the right output (0 to 4095)
+    
+
+    arr = np.empty(0)    
 
     scale = shape[0] if shape[0] > shape[1] else shape[1]
     
-    scale = 2000/scale
-    contours[:] = [c * scale + 1000 for c in contours]
+    scale = output_size / scale
+    contours[:] = [c * scale + output_offset for c in contours]
     
-    #perform appropriate size reduction
- 
     #convert the contours array to a style that is appropriate for laser display. 
     for loop in contours: #this returns the individual shape. light must be on for the entire time, then off as it switches to the next shape. 
-        #print loop
-        #print loop[0]
-        #print loop[0][0]
-        arr = np.append(arr, format_off(loop[0][0]))
+        arr = np.append(arr, format_off(loop[0][0]))    #arrive at the destination wih the laser off
         for point in loop:
             arr = np.append(arr, format_on(point[0]))
-
-    
+        arr = np.append(arr, format_off(loop[len(loop)-1][0]))    #turn the laser off before going to the next point. 
 
     return arr
 
 def init_laser():
-    print "r=2000"
-    print "e=1"
+    #initialise the galvos. 
+    print "r=10000" #The 'r' parameter sets the pulses per second. Should not exceed 20 000
+    print "e=1"    #enable= true
 
 def draw_shape(arr):
-    i=0
-
     for a in arr:
-        '''
-        i+=1
-        if (i == 5):
-            print a
-            i = 0
-        '''
-        print a
+        print a #print line by line
 
 def exit_laser():
-    print "e=0"
-    #print "f=1"
+    print "e=0"  #enable = false
+    #print "f=1" #flushing functionality seems to be broken
 
 if(__name__ == "__main__"):
-    #im = cv2.imread('square.png')
-    im = cv2.imread('hello.jpeg')
-    #im = cv2.imread('hello1.jpg')
+    #im = cv2.imread('square.png') #select the desired image.
+    #im = cv2.imread('hello.jpeg')
+    im = cv2.imread('hello1.jpg')
     #im = cv2.imread('circles.jpeg')
     #im = cv2.imread('circles2.png')
     #im = cv2.imread('test.jpg')
