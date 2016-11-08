@@ -1,5 +1,17 @@
 Laser-Projector
 
+will need to install venv
+pip install virtualenv --user
+or
+sudo apt-get install python-virtualenv
+then activate venv before working on the project. 
+```source venv/bin/activate```
+venv makes managing the python dependancies much easier. 
+flask offers a good explanation of venv here: http://flask.pocoo.org/docs/0.11/installation/
+
+for twitter API follow the instructions here:
+socialmedia-class.org/twiterturorial.html
+
 r=1000 # THIS MUST BE THE FIRST LINE IN THE FILE!
 The "r=number" command sets the speed in points per second (pps) at which samples are displayed by the Lasershark. 
 The pps speed can be set to any integer between 1 and the maximum value as reported by the Lasershark (64000)   
