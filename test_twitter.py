@@ -22,11 +22,18 @@ oauth = OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
 twitter = Twitter(auth=oauth)
 
 tweets = twitter.search.tweets(q=mention_account)
-tweets = json.dumps(tweets)
-print tweets
+#tweets = json.dumps(tweets)
+#print tweets
+
+#strip out the metadata
+tweets = tweets['statuses']
 
 for tweet in tweets:
-    #print json.dumps(tweet)
+    print json.dumps(tweet)
     #print tweet
+    #print '\n\n\n'
     #print len(tweet)
+    #for t in tweet:
+    #    print t
     continue
+
