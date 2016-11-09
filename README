@@ -12,6 +12,7 @@ flask offers a good explanation of venv here: http://flask.pocoo.org/docs/0.11/i
 for twitter API follow the instructions here:
 socialmedia-class.org/twiterturorial.html
 
+Lasershark protocol:
 r=1000 # THIS MUST BE THE FIRST LINE IN THE FILE!
 The "r=number" command sets the speed in points per second (pps) at which samples are displayed by the Lasershark. 
 The pps speed can be set to any integer between 1 and the maximum value as reported by the Lasershark (64000)   
@@ -32,7 +33,7 @@ A sample defines galvo positioning and laser intensity for a particular point to
 The format is "s=X,Y,A,B,C,INTL_A"
 The ranges for these fields are X=[0-4095],Y=[0-4095],A=[0-4095],B=[0-4095],C=[0,1],INTL_A=[0,1]
 For A and B (analog laser control outputs), 0 means the output is off and 4096 means the output is at full power
-	1024 would indicate 25% output power, 2048 would indicate 50% output power, etc.
+1024 would indicate 25% output power, 2048 would indicate 50% output power, etc.
 For C (TTL laser control output) 0 means the output is off and 1 means the output is on
 For INTL_A (Interlock A) 0 means the output is off and 1 means the output is on (for ttl)
 Samples are queued until they fill a full lasershark packet and are then written out to the lasershark.

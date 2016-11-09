@@ -70,7 +70,7 @@ def exit_laser():
 if(__name__ == "__main__"):
     #im = cv2.imread('square.png') #select the desired image.
     #im = cv2.imread('hello.jpeg')
-    im = cv2.imread('hello1.jpg')
+    im = cv2.imread('test_shapes/hello1.jpg')
     #im = cv2.imread('circles.jpeg')
     #im = cv2.imread('circles2.png')
     #im = cv2.imread('test.jpg')
