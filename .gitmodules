@@ -1,0 +1,3 @@
+[submodule "openlase"]
+	path = openlase
+	url = https://github.com/marcan/openlase.git
