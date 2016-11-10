@@ -12,6 +12,11 @@ flask offers a good explanation of venv here: http://flask.pocoo.org/docs/0.11/i
 for twitter API follow the instructions here:
 socialmedia-class.org/twiterturorial.html
 
+
+Open lase installation: 
+https://github.com/marcan/openlase/wiki/Installation
+Note: this for reference because I should be including all the compiled files in the project. 
+
 Lasershark protocol:
 r=1000 # THIS MUST BE THE FIRST LINE IN THE FILE!
 The "r=number" command sets the speed in points per second (pps) at which samples are displayed by the Lasershark. 
