@@ -15,7 +15,6 @@ Source code available here https://github.com/MalcolmWilliams/Laser-Writer
 
 
 Several modules aid the functionality:
-
 - `Select_Tweet <https://malcolmwilliams.github.io/Laser-Writer/code.html#module-Select_Tweet>`_ selects a tweet from a pool of available tweets based on certain characteristics.
 
 - `Retrieve_Tweets <https://malcolmwilliams.github.io/Laser-Writer/code.html#module-Retrieve_Tweets>`_ uses twitter's API retrieve tweets aimed at the desired source, perform black listing and store the tweet data in a text file.
