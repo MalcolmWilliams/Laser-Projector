@@ -6,8 +6,8 @@ Installation
 
 Venv
 ++++
-1. You will need to install venv ``pip install virtualenv --user`` or ``sudo apt-get install python-virtualenv``
-2. Then activate venv before working on the project ``source venv/bin/activate``
+| 1. You will need to install venv ``pip install virtualenv --user`` or ``sudo apt-get install python-virtualenv``
+| 2. Then activate venv before working on the project ``source venv/bin/activate``
 | *Note:* Venv makes managing the python dependancies much easier. Flask offers a good explanation of venv here: http://flask.pocoo.org/docs/0.11/installation/
 
 Twitter
@@ -23,10 +23,10 @@ Openlase
 
 Usage
 =====
-| 1. Run ``./start_ol_services`` This will start all of the openlase and jack utilities (output control, jack, simulator, lasershark_jack)
-| 2. Then in new window (``ctrl-shift-t``) enter the venv enviroment: ``source venv/bin/activate``
-| 3. Run the main.py file ``python main.py``
-| 4. You might need to click the patchbay button in JACK and activate all the connections (see the jack tutorial for setting up the connections)
+1. Run ``./start_ol_services`` This will start all of the openlase and jack utilities (output control, jack, simulator, lasershark_jack)
+2. Then in new window (``ctrl-shift-t``) enter the venv enviroment: ``source venv/bin/activate``
+3. Run the main.py file ``python main.py``
+4. You might need to click the patchbay button in JACK and activate all the connections (see the jack tutorial for setting up the connections)
 
 
 Documentation:
