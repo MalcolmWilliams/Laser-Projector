@@ -5,7 +5,7 @@ Main
 ====
 .. automodule:: main
 .. autoclass:: Laser_Writer
-    :members: __init__, write_tweet, start_tweet_retrieval, demo
+    :members: 
 
 Openlase_Driver
 ===============
