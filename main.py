@@ -2,10 +2,10 @@
 This is the main function that controls the flow of all the other processes. 
 
 This module defines the following class:
-- `Laser_Writer` contains the functions to control writing flow
+- `Laser_Writer` contains the functions to control data flow
 
 How To Use This Module
-======================
+----------------------
 
 1. Activate venv: ``source venv/bin/activate``
 2. Start support services: ``./start_ol_services.hs``
@@ -23,21 +23,14 @@ import time
 class Laser_Writer:
     
     """
-    A laser writer that uses laser galvonometers (TODO: link to wikipedia) to write tweets on distant objects
-
-    Several modules aid the functionality:
-    - `Select_Tweet` (TODO: link to Select_Tweet) Selects a tweet from a pool of available tweets based on certain characteristics
-    - `Retrieve_Tweets` (TODO: link to Retrieve_Tweets) using twitter's API retrieve tweets aimed at the desired source, perform black listing and store the tweet data in a text file
-    - `Openlase_Driver` (TODO: link to Openlase_Driver) provide an abstraction layer on the openlase library. The tweet text is sent here and is then formatted and sent to the laser
+    This class calls all the necessary helper modules.
+    Concurrently running modules are handled with pythons threading library
     """
 
     def __init__(self):
         """
         Initilise a Laser_Writer object
         """
-
-
-        #init the needed functions. 
         
         #Properties of the search
         mention_account = '@BarackObama'
@@ -56,7 +49,20 @@ class Laser_Writer:
         self.st = Select_Tweet.Select_Tweet(tweets_filename=tweets_filename)
         #st.self_test()
 
-    def write_tweet(self, time_display=10):
+    def write_tweet(self, tweet="This is the default tweet", time_display=10):
+        """
+        Will send a tweet to the laser to be written
+
+        **Args:**
+            *tweet:* A 140 character max string to be sent to the laser
+            *time_display:* How long the tweet will be displayed. When the time runs out the thread will terminate and the function will exit.
+
+        **Returns:**
+            None
+        
+        **Note:**
+            Will print out the message to be displayed.
+        """
         tweet = self.st.get_random_tweet_text()
         tweet = tweet.encode('ascii', 'ignore') #openlase library can only take ascii data
         print "Output: " + str(tweet)
@@ -68,30 +74,34 @@ class Laser_Writer:
         t.start()
         #note: there needs to be a way to kill this and start it again nicely. 
 
-    def write_message(self, message="this is the default message", time_display=10):
-        message = message.encode('ascii', 'ignore') #openlase library can only take ascii data
-        print "Output: " + str(message)
-        t = threading.Thread(target=self.od.write_tweet(message, time_display))
-        t.start()
-
     def start_tweet_retrieval(self):
+        """
+        Continuously check for new tweets with the matching criteria
+        
+        **Args:**
+            *None*
+        **Returns:**
+            *None*  
+
+        """
         t = threading.Thread(target = self.rt.get_tweets)    #start the tweet retrieval process as a thread.
         t.daemon = True         #make the thread a daemon so it is properly killed on Keyboard Interrupt
         t.start()
         
 
     def demo(self):
-        #this function demos the functionality of the program. 
-        #there are 2 parts
-        #1. it selects and displays a random tweet
-        #2. user can enter their own messages and have them displayed.
-        #
-        # use: run the program and it will start displaying random tweets. hit ctrl-c and it will give keyboard prompts
+        """
+        Demos two ways the program can be used. 
+        1. Select and display a random tweet
+        2. Directly enter a message into the command prompt
+
+        The function will start by randomly showing tweets. Hit ctrl-c to switch to keyboard promt. Hit crtl-c again to exit
+        """
         try:
             while(True):
                 print("====================================================")
                 print "Selecting a new random tweet"
-                self.write_tweet(5)
+                self.write_tweet(self.st.get_random_tweet_text(), 5)
         
         except KeyboardInterrupt:
             pass
@@ -100,7 +110,7 @@ class Laser_Writer:
                 #get the users message:
                 print("====================================================")
                 message = raw_input("Enter the desired message: ") 
-                self.write_message(message, 5)
+                self.write_tweet(message, 5)
         except KeyboardInterrupt:
             pass        
 
