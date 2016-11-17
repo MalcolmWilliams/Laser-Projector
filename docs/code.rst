@@ -19,6 +19,6 @@ Select_Tweet
 .. autoclass:: Select_Tweet
 
 Retrieve_Tweets
-==============
+===============
 .. automodule:: Retrieve_Tweets
 .. autoclass:: Retrieve_Tweets
