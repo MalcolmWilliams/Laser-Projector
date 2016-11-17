@@ -17,6 +17,13 @@ Open lase installation:
 https://github.com/marcan/openlase/wiki/Installation
 Note: this for reference because I should be including all the compiled files in the project. 
 
+to start:
+run ```./start_ol_services```
+this will start all of the openlase and jack utilities (output window, jack, simulator)
+then in new window (ctrl-shift-t) enter the venv enviroment ('''source venv/bin/activate''')
+run the main.py file. ('''python main.py''')
+You might need to click the patchbay button in jack and activate all the connections (see the jack tutorial for setting up the connections)
+
 Lasershark protocol:
 r=1000 # THIS MUST BE THE FIRST LINE IN THE FILE!
 The "r=number" command sets the speed in points per second (pps) at which samples are displayed by the Lasershark. 

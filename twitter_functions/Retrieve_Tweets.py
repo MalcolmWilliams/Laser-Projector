@@ -53,7 +53,7 @@ class Retrieve_Tweets:
                 output_file.flush()     #make sure the buffer is clear
                 id_ = tweet['id']
                 if(id_ > latest_id): latest_id = id_
-                print latest_id
+                print "Added tweet: " + str(id_)
 
             #keep refreshing and looking for new tweets to add to file. 
             while(True):
@@ -68,7 +68,7 @@ class Retrieve_Tweets:
                         output_file.flush()     #make sure the buffer is clear. 
                         id_ = tweet['id']
                         if(id_ > latest_id): latest_id = id_
-                        print latest_id
+                        print "Added tweet: " + str(id_)
 
 
 if(__name__ == "__main__"):
