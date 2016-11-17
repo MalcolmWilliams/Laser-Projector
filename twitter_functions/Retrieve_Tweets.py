@@ -1,5 +1,10 @@
 """
-Retrieve tweets using the Twitter API
+Twitter offers a comprehensive set REST APIs to provide programmatic access to read and write Twitter data. More information is avaiable at the following `link <https://dev.twitter.com/rest/public>`_
+
+Several other sources were used to write the Retrive_Tweet module:
+- Tutorial: http://socialmedia-class.org/twittertutorial.html
+- Python Library: https://pypi.python.org/pypi/twitter
+- Search API query docs: https://dev.twitter.com/rest/public/search
 """
 
 __docformat__='restructuredtext'
@@ -16,8 +21,29 @@ import time
 
 
 class Retrieve_Tweets:
+    """
+    https://dev.twitter.com/rest/public
+    """
+
 
     def __init__(self, black_list, mention_account='@malcolm_test', retrieval_count='20', filter_='filter:safe', lang='en', tweets_filename='output.txt'):
+        """
+        Initializes an instance of the retrieve tweets module
+
+        **Args:**
+            | *black_list:* string containg inappropriate words that should be filtered out, add them in this format ```-shit -piss -fuck -cunt -cocksucker -motherfucker```
+            | *mention_account:* The account that the tweets are directed to
+            | *retrieval_count:* Maximum number of tweets that will be retrieved in a single refresh
+            | *filter_:* Twitters own filtering intelligence to make sure tweets are safe
+            | *lang:* Language of the tweet
+            | *tweets_filename:* Storage location for retrieved tweets
+        
+        **Returns:**
+            | *None*
+
+        **Note:**
+            | Also takes care of the authorization
+        """
         # Variables that contains the user credentials to access Twitter API 
         ACCESS_TOKEN = '795764215411838977-ykebbXz7Hp0Uoe2LdkAirMg9a3gNUik'
         ACCESS_SECRET = 'FSPQaCJwrRQ5Syhqbrh1CHgzQhA61bMyUuG04nVdEJJ1o'
@@ -42,7 +68,20 @@ class Retrieve_Tweets:
         self.twitter = Twitter(auth=oauth)
 
     def get_tweets(self):
+        """
+        Store any tweets that match the search parameters
 
+        **Args:**
+            | *None*
+        
+        **Returns:**
+            | *None*
+
+        **Note:**
+            | Stores discovered tweets in file determined by ```tweets_filename```
+            | Prints out tweet id whenever a new tweet is found
+            | Successive searches will only look for tweets that have come in since the last search
+        """
         tweets = self.twitter.search.tweets(q=self.query, count=self.retrieval_count)
         #tweets = json.dumps(tweets)
         #print tweets

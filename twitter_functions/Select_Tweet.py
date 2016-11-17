@@ -1,14 +1,18 @@
 
 """
-This program selects a tweet from the list that retrieve_tweet constantly updates. 
-in the future there can be some type of algorithm to select the "hottest" one to display (reddit style)
-for now it is placeholder and chooses the latest tweet
+Select a tweet from the pool of potential tweets based on a predetermined algorithm.
+The pool of tweets are stored in ```output.txt``` in JSON format
+
+Currently the most advanced selection method is ```select_random_tweet_id()```
+Future implementations will include more intelligent tweet selections based on a number of factors, such as:
+- Location
+- Time
+- Subjet Matter
+- Number of favorites/retweets
+- Hashtags
 """
 
 __docformat__='restructuredtext'
-
-
-
 
 
 # Import the necessary package to process data in JSON format
@@ -20,8 +24,22 @@ import types
 import random
 
 class Select_Tweet:
+    """
+    Select a tweet from the pool of potential candidates
+    """
+
 
     def __init__(self, mention_account='@malcolm_test', tweets_filename='./output.txt'):
+        """
+        Initialize an instance of the tweet selection module
+
+        **Args:**
+            | *mention_account:* The account that the tweets are directed to
+            | *tweets_filename:* Where to find the pool of potential tweets
+
+        **Return:**
+            | *None*
+        """
         self.mention_account = mention_account
         self.tweets_filename = tweets_filename
         self.tweets_file = open(tweets_filename, "r")
@@ -31,6 +49,16 @@ class Select_Tweet:
         self.refresh_tweets()
 
     def print_file(self):
+        """
+        Prints the entire pool of tweets in human readable format
+
+        **Args:**
+            | *None*
+        **Returns:**
+            | *None*
+        **Note:**
+            | Will print out to terminal
+        """
         for line in self.tweets_file:
             try:
                 #print line
@@ -55,25 +83,82 @@ class Select_Tweet:
                 continue
 
     def get_tweet_by_id(self, target_id):
+        """
+        Select a tweet given a specific ID
+        
+        **Args:**
+            | *target_id:* ID of the target tweet
+
+        **Returns:**
+            | JSON tweet object, or None
+        """
         for tweet in self.tweets:
             if 'text' in tweet:
-                #print type(tweet['id'])
-                #print type(target_id)
                 if tweet['id'] == target_id:
                     return tweet        #return a copy of the tweet when we find it. 
         return None #something went wrong (corrupt file, couldnt find id etc)
 
+    def select_random_tweet(self):
+        """
+        Select a tweet random tweet from the pool
+        
+        **Args:**
+            | *None*
+
+        **Returns:**
+            | JSON tweet object
+        """
+        rand_int = random.randint(0, len(tweets)-1)
+        print "Random tweet selected: " + str(tweets[rand_int]['id'])
+        return tweets[rand_int]
+
     def get_tweet_text(self, tweet):   
+        """
+        retrieve text from JSON tweet object
+        
+        **Args:**
+            | *tweet:* JSON tweet object
+
+        **Returns:**
+            | tweet string or error message
+        
+        **Note:**
+            | Also does some formatting
+        """
         try:
             return tweet['text'].replace(self.mention_account,"",1).lstrip()    #strip out the first occurence of the mention, and any leading whitespace. 
         except:
             return "could not find tweet"
+        
+    def get_random_tweet_text(self):
+        """
+        Simplifies process of getting random tweet text
+        
+        **Args:**
+            | *None*
 
-    def self_test(self):
+        **Returns:**
+            | tweet string or error message
+
+        **Note:**
+            | Also refreshes pool
+        """
         self.refresh_tweets()
-        return self.get_tweet_text(self.get_tweet_by_id(795766807424626693))#   795795239092908032))#796082699215613952))
-
+        return self.get_tweet_text(self.select_random_tweet())  
+    
     def refresh_tweets(self):
+        """
+        Parses the output.txt file and builds an internal pool of tweet data
+        
+        **Args:**
+            | *None*
+
+        **Returns:**
+            | None
+
+        **Note:**
+            | Used for initial pool building and refreshing
+        """
         tweets = []
         self.tweets_file.seek(0)    #refresh all the tweets in the pool. in the future if there are too many tweets, only refresh the new ones.
         for line in self.tweets_file:
@@ -85,21 +170,22 @@ class Select_Tweet:
                 continue
         self.tweets = tweets
         print "There are " + str(len(self.tweets)) + " tweets in the pool"
-        #print "tweets"
-        #print tweets
-        #self.tweets = tweets
 
-    def select_random_id(self):
-        id_list = []
-        for tweet in self.tweets:
-            id_list.append(tweet['id'])
-        rand_int = random.randint(0, len(id_list)-1)
-        print "Random tweet selected: " + str(id_list[rand_int])
-        return id_list[rand_int]
+    def self_test(self):
+        """
+        Easily test functionality. Grabs 1 specific tweet.
         
-    def get_random_tweet_text(self):
+        **Args:**
+            | *None*
+
+        **Returns:**
+            | Tweet string or error message
+
+        **Note:**
+            | Also refreshes pool
+        """
         self.refresh_tweets()
-        return self.get_tweet_text(self.get_tweet_by_id(self.select_random_id()))  
+        return self.get_tweet_text(self.get_tweet_by_id(795766807424626693))#   795795239092908032))#796082699215613952))
 
 if(__name__ == "__main__"):
     mention_account = '@malcolm_test'
