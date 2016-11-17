@@ -69,7 +69,7 @@
 <span class="sd">    Concurrently running modules are handled with pythons threading library</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Laser_Writer.__init__"><a class="viewcode-back" href="../code.html#main.Laser_Writer.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initilise a Laser_Writer object</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -88,7 +88,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">rt</span> <span class="o">=</span> <span class="n">Retrieve_Tweets</span><span class="o">.</span><span class="n">Retrieve_Tweets</span><span class="p">(</span><span class="n">black_list</span><span class="p">,</span> <span class="n">tweets_filename</span><span class="o">=</span><span class="n">tweets_filename</span><span class="p">,</span> <span class="n">mention_account</span><span class="o">=</span><span class="n">mention_account</span><span class="p">)</span>
         
         <span class="c1">#select tweet should be called after, in case the output.txt file does not exist. </span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">st</span> <span class="o">=</span> <span class="n">Select_Tweet</span><span class="o">.</span><span class="n">Select_Tweet</span><span class="p">(</span><span class="n">tweets_filename</span><span class="o">=</span><span class="n">tweets_filename</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">st</span> <span class="o">=</span> <span class="n">Select_Tweet</span><span class="o">.</span><span class="n">Select_Tweet</span><span class="p">(</span><span class="n">tweets_filename</span><span class="o">=</span><span class="n">tweets_filename</span><span class="p">)</span></div>
         <span class="c1">#st.self_test()</span>
 
 <div class="viewcode-block" id="Laser_Writer.write_tweet"><a class="viewcode-back" href="../code.html#main.Laser_Writer.write_tweet">[docs]</a>    <span class="k">def</span> <span class="nf">write_tweet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tweet</span><span class="o">=</span><span class="s2">&quot;This is the default tweet&quot;</span><span class="p">,</span> <span class="n">time_display</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
