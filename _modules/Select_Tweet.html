@@ -45,15 +45,19 @@
   <h1>Source code for Select_Tweet</h1><div class="highlight"><pre>
 <span></span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This program selects a tweet from the list that retrieve_tweet constantly updates. </span>
-<span class="sd">in the future there can be some type of algorithm to select the &quot;hottest&quot; one to display (reddit style)</span>
-<span class="sd">for now it is placeholder and chooses the latest tweet</span>
+<span class="sd">Select a tweet from the pool of potential tweets based on a predetermined algorithm.</span>
+<span class="sd">The pool of tweets are stored in ```output.txt``` in JSON format</span>
+
+<span class="sd">Currently the most advanced selection method is ```select_random_tweet_id()```</span>
+<span class="sd">Future implementations will include more intelligent tweet selections based on a number of factors, such as:</span>
+<span class="sd">- Location</span>
+<span class="sd">- Time</span>
+<span class="sd">- Subjet Matter</span>
+<span class="sd">- Number of favorites/retweets</span>
+<span class="sd">- Hashtags</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="n">__docformat__</span><span class="o">=</span><span class="s1">&#39;restructuredtext&#39;</span>
-
-
-
 
 
 <span class="c1"># Import the necessary package to process data in JSON format</span>
@@ -65,8 +69,22 @@
 <span class="kn">import</span> <span class="nn">random</span>
 
 <div class="viewcode-block" id="Select_Tweet"><a class="viewcode-back" href="../code.html#Select_Tweet.Select_Tweet">[docs]</a><span class="k">class</span> <span class="nc">Select_Tweet</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Select a tweet from the pool of potential candidates</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mention_account</span><span class="o">=</span><span class="s1">&#39;@malcolm_test&#39;</span><span class="p">,</span> <span class="n">tweets_filename</span><span class="o">=</span><span class="s1">&#39;./output.txt&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize an instance of the tweet selection module</span>
+
+<span class="sd">        **Args:**</span>
+<span class="sd">            | *mention_account:* The account that the tweets are directed to</span>
+<span class="sd">            | *tweets_filename:* Where to find the pool of potential tweets</span>
+
+<span class="sd">        **Return:**</span>
+<span class="sd">            | *None*</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">mention_account</span> <span class="o">=</span> <span class="n">mention_account</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tweets_filename</span> <span class="o">=</span> <span class="n">tweets_filename</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tweets_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">tweets_filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
@@ -75,7 +93,17 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">tweets</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">refresh_tweets</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">print_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Select_Tweet.print_file"><a class="viewcode-back" href="../code.html#Select_Tweet.Select_Tweet.print_file">[docs]</a>    <span class="k">def</span> <span class="nf">print_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Prints the entire pool of tweets in human readable format</span>
+
+<span class="sd">        **Args:**</span>
+<span class="sd">            | *None*</span>
+<span class="sd">        **Returns:**</span>
+<span class="sd">            | *None*</span>
+<span class="sd">        **Note:**</span>
+<span class="sd">            | Will print out to terminal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tweets_file</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="c1">#print line</span>
@@ -97,28 +125,85 @@
 
             <span class="k">except</span><span class="p">:</span>
                 <span class="c1"># read in a line is not in JSON format (sometimes error occured)</span>
-                <span class="k">continue</span>
+                <span class="k">continue</span></div>
 
-    <span class="k">def</span> <span class="nf">get_tweet_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_id</span><span class="p">):</span>
+<div class="viewcode-block" id="Select_Tweet.get_tweet_by_id"><a class="viewcode-back" href="../code.html#Select_Tweet.Select_Tweet.get_tweet_by_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_tweet_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_id</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Select a tweet given a specific ID</span>
+<span class="sd">        </span>
+<span class="sd">        **Args:**</span>
+<span class="sd">            | *target_id:* ID of the target tweet</span>
+
+<span class="sd">        **Returns:**</span>
+<span class="sd">            | JSON tweet object, or None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tweets</span><span class="p">:</span>
             <span class="k">if</span> <span class="s1">&#39;text&#39;</span> <span class="ow">in</span> <span class="n">tweet</span><span class="p">:</span>
-                <span class="c1">#print type(tweet[&#39;id&#39;])</span>
-                <span class="c1">#print type(target_id)</span>
                 <span class="k">if</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">target_id</span><span class="p">:</span>
                     <span class="k">return</span> <span class="n">tweet</span>        <span class="c1">#return a copy of the tweet when we find it. </span>
-        <span class="k">return</span> <span class="kc">None</span> <span class="c1">#something went wrong (corrupt file, couldnt find id etc)</span>
+        <span class="k">return</span> <span class="kc">None</span> <span class="c1">#something went wrong (corrupt file, couldnt find id etc)</span></div>
 
-    <span class="k">def</span> <span class="nf">get_tweet_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tweet</span><span class="p">):</span>   
+<div class="viewcode-block" id="Select_Tweet.select_random_tweet"><a class="viewcode-back" href="../code.html#Select_Tweet.Select_Tweet.select_random_tweet">[docs]</a>    <span class="k">def</span> <span class="nf">select_random_tweet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Select a tweet random tweet from the pool</span>
+<span class="sd">        </span>
+<span class="sd">        **Args:**</span>
+<span class="sd">            | *None*</span>
+
+<span class="sd">        **Returns:**</span>
+<span class="sd">            | JSON tweet object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rand_int</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="s2">&quot;Random tweet selected: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweets</span><span class="p">[</span><span class="n">rand_int</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">tweets</span><span class="p">[</span><span class="n">rand_int</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Select_Tweet.get_tweet_text"><a class="viewcode-back" href="../code.html#Select_Tweet.Select_Tweet.get_tweet_text">[docs]</a>    <span class="k">def</span> <span class="nf">get_tweet_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tweet</span><span class="p">):</span>   
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        retrieve text from JSON tweet object</span>
+<span class="sd">        </span>
+<span class="sd">        **Args:**</span>
+<span class="sd">            | *tweet:* JSON tweet object</span>
+
+<span class="sd">        **Returns:**</span>
+<span class="sd">            | tweet string or error message</span>
+<span class="sd">        </span>
+<span class="sd">        **Note:**</span>
+<span class="sd">            | Also does some formatting</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mention_account</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>    <span class="c1">#strip out the first occurence of the mention, and any leading whitespace. </span>
         <span class="k">except</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s2">&quot;could not find tweet&quot;</span>
+            <span class="k">return</span> <span class="s2">&quot;could not find tweet&quot;</span></div>
+        
+<div class="viewcode-block" id="Select_Tweet.get_random_tweet_text"><a class="viewcode-back" href="../code.html#Select_Tweet.Select_Tweet.get_random_tweet_text">[docs]</a>    <span class="k">def</span> <span class="nf">get_random_tweet_text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Simplifies process of getting random tweet text</span>
+<span class="sd">        </span>
+<span class="sd">        **Args:**</span>
+<span class="sd">            | *None*</span>
 
-    <span class="k">def</span> <span class="nf">self_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="sd">        **Returns:**</span>
+<span class="sd">            | tweet string or error message</span>
+
+<span class="sd">        **Note:**</span>
+<span class="sd">            | Also refreshes pool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">refresh_tweets</span><span class="p">()</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tweet_text</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_tweet_by_id</span><span class="p">(</span><span class="mi">795766807424626693</span><span class="p">))</span><span class="c1">#   795795239092908032))#796082699215613952))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tweet_text</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_random_tweet</span><span class="p">())</span>  </div>
+    
+<div class="viewcode-block" id="Select_Tweet.refresh_tweets"><a class="viewcode-back" href="../code.html#Select_Tweet.Select_Tweet.refresh_tweets">[docs]</a>    <span class="k">def</span> <span class="nf">refresh_tweets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parses the output.txt file and builds an internal pool of tweet data</span>
+<span class="sd">        </span>
+<span class="sd">        **Args:**</span>
+<span class="sd">            | *None*</span>
 
-    <span class="k">def</span> <span class="nf">refresh_tweets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="sd">        **Returns:**</span>
+<span class="sd">            | None</span>
+
+<span class="sd">        **Note:**</span>
+<span class="sd">            | Used for initial pool building and refreshing</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">tweets</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tweets_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>    <span class="c1">#refresh all the tweets in the pool. in the future if there are too many tweets, only refresh the new ones.</span>
         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tweets_file</span><span class="p">:</span>
@@ -129,22 +214,23 @@
                 <span class="c1">#print &quot;could not append&quot;</span>
                 <span class="k">continue</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tweets</span> <span class="o">=</span> <span class="n">tweets</span>
-        <span class="nb">print</span> <span class="s2">&quot;There are &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tweets</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; tweets in the pool&quot;</span>
-        <span class="c1">#print &quot;tweets&quot;</span>
-        <span class="c1">#print tweets</span>
-        <span class="c1">#self.tweets = tweets</span>
+        <span class="nb">print</span> <span class="s2">&quot;There are &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tweets</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; tweets in the pool&quot;</span></div>
 
-    <span class="k">def</span> <span class="nf">select_random_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">id_list</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tweets</span><span class="p">:</span>
-            <span class="n">id_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
-        <span class="n">rand_int</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">id_list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-        <span class="nb">print</span> <span class="s2">&quot;Random tweet selected: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">id_list</span><span class="p">[</span><span class="n">rand_int</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">id_list</span><span class="p">[</span><span class="n">rand_int</span><span class="p">]</span>
-        
-    <span class="k">def</span> <span class="nf">get_random_tweet_text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Select_Tweet.self_test"><a class="viewcode-back" href="../code.html#Select_Tweet.Select_Tweet.self_test">[docs]</a>    <span class="k">def</span> <span class="nf">self_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Easily test functionality. Grabs 1 specific tweet.</span>
+<span class="sd">        </span>
+<span class="sd">        **Args:**</span>
+<span class="sd">            | *None*</span>
+
+<span class="sd">        **Returns:**</span>
+<span class="sd">            | Tweet string or error message</span>
+
+<span class="sd">        **Note:**</span>
+<span class="sd">            | Also refreshes pool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">refresh_tweets</span><span class="p">()</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tweet_text</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_tweet_by_id</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_random_id</span><span class="p">()))</span>  </div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tweet_text</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_tweet_by_id</span><span class="p">(</span><span class="mi">795766807424626693</span><span class="p">))</span><span class="c1">#   795795239092908032))#796082699215613952))</span></div></div>
 
 <span class="k">if</span><span class="p">(</span><span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">):</span>
     <span class="n">mention_account</span> <span class="o">=</span> <span class="s1">&#39;@malcolm_test&#39;</span>
