@@ -54,8 +54,8 @@ class Laser_Writer:
         Will send a tweet to the laser to be written
 
         **Args:**
-            *tweet:* A 140 character max string to be sent to the laser
-            *time_display:* How long the tweet will be displayed. When the time runs out the thread will terminate and the function will exit.
+            | *tweet:* A 140 character max string to be sent to the laser
+            | *time_display:* How long the tweet will be displayed. When the time runs out the thread will terminate and the function will exit.
 
         **Returns:**
             None
