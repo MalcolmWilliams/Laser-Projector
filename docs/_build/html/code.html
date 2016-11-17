@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Documentation for the code &#8212; Laser-Writer 0.1 documentation</title>
+    <title>Code Documentation &#8212; Laser-Writer 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -42,8 +42,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="documentation-for-the-code">
-<h1>Documentation for the code<a class="headerlink" href="#documentation-for-the-code" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="code-documentation">
+<h1>Code Documentation<a class="headerlink" href="#code-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="module-main">
 <span id="main"></span><h2>Main<a class="headerlink" href="#module-main" title="Permalink to this headline">¶</a></h2>
 <p>This is the main function that controls the flow of all the other processes.</p>
@@ -54,12 +54,17 @@
 <li>Start support services: <code class="docutils literal"><span class="pre">./start_ol_services.hs</span></code></li>
 <li>Run it: <code class="docutils literal"><span class="pre">python</span> <span class="pre">main.py</span></code></li>
 </ol>
-</div>
 <dl class="class">
 <dt id="main.Laser_Writer">
 <em class="property">class </em><code class="descclassname">main.</code><code class="descname">Laser_Writer</code><a class="reference internal" href="_modules/main.html#Laser_Writer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Laser_Writer" title="Permalink to this definition">¶</a></dt>
 <dd><p>This class calls all the necessary helper modules.
 Concurrently running modules are handled with pythons threading library</p>
+<dl class="method">
+<dt id="main.Laser_Writer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Laser_Writer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Laser_Writer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initilise a Laser_Writer object</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="main.Laser_Writer.demo">
 <code class="descname">demo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Laser_Writer.demo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Laser_Writer.demo" title="Permalink to this definition">¶</a></dt>
@@ -103,6 +108,7 @@ Concurrently running modules are handled with pythons threading library</p>
 
 </dd></dl>
 
+</div>
 </div>
 <div class="section" id="module-Openlase_Driver">
 <span id="openlase-driver"></span><h2>Openlase_Driver<a class="headerlink" href="#module-Openlase_Driver" title="Permalink to this headline">¶</a></h2>
@@ -197,6 +203,25 @@ Concurrently running modules are handled with pythons threading library</p>
 <dt id="Select_Tweet.Select_Tweet">
 <em class="property">class </em><code class="descclassname">Select_Tweet.</code><code class="descname">Select_Tweet</code><span class="sig-paren">(</span><em>mention_account='&#64;malcolm_test'</em>, <em>tweets_filename='./output.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Select a tweet from the pool of potential candidates</p>
+<dl class="method">
+<dt id="Select_Tweet.Select_Tweet.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>mention_account='&#64;malcolm_test'</em>, <em>tweets_filename='./output.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize an instance of the tweet selection module</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>mention_account:</em> The account that the tweets are directed to</div>
+<div class="line"><em>tweets_filename:</em> Where to find the pool of potential tweets</div>
+</div>
+</dd>
+<dt><strong>Return:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>None</em></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="method">
 <dt id="Select_Tweet.Select_Tweet.get_random_tweet_text">
 <code class="descname">get_random_tweet_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet.get_random_tweet_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet.get_random_tweet_text" title="Permalink to this definition">¶</a></dt>
@@ -363,6 +388,34 @@ Concurrently running modules are handled with pythons threading library</p>
 <em class="property">class </em><code class="descclassname">Retrieve_Tweets.</code><code class="descname">Retrieve_Tweets</code><span class="sig-paren">(</span><em>black_list</em>, <em>mention_account='&#64;malcolm_test'</em>, <em>retrieval_count='20'</em>, <em>filter_='filter:safe'</em>, <em>lang='en'</em>, <em>tweets_filename='output.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Retrieve_Tweets.html#Retrieve_Tweets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Retrieve_Tweets.Retrieve_Tweets" title="Permalink to this definition">¶</a></dt>
 <dd><p><a class="reference external" href="https://dev.twitter.com/rest/public">https://dev.twitter.com/rest/public</a></p>
 <dl class="method">
+<dt id="Retrieve_Tweets.Retrieve_Tweets.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>black_list</em>, <em>mention_account='&#64;malcolm_test'</em>, <em>retrieval_count='20'</em>, <em>filter_='filter:safe'</em>, <em>lang='en'</em>, <em>tweets_filename='output.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Retrieve_Tweets.html#Retrieve_Tweets.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Retrieve_Tweets.Retrieve_Tweets.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes an instance of the retrieve tweets module</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>black_list:</em> string containg inappropriate words that should be filtered out, add them in this format <code class="docutils literal"><span class="pre">`-shit</span> <span class="pre">-piss</span> <span class="pre">-fuck</span> <span class="pre">-cunt</span> <span class="pre">-cocksucker</span> <span class="pre">-motherfucker`</span></code></div>
+<div class="line"><em>mention_account:</em> The account that the tweets are directed to</div>
+<div class="line"><em>retrieval_count:</em> Maximum number of tweets that will be retrieved in a single refresh</div>
+<div class="line"><em>filter_:</em> Twitters own filtering intelligence to make sure tweets are safe</div>
+<div class="line"><em>lang:</em> Language of the tweet</div>
+<div class="line"><em>tweets_filename:</em> Storage location for retrieved tweets</div>
+</div>
+</dd>
+<dt><strong>Returns:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>None</em></div>
+</div>
+</dd>
+<dt><strong>Note:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">Also takes care of the authorization</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="Retrieve_Tweets.Retrieve_Tweets.get_tweets">
 <code class="descname">get_tweets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Retrieve_Tweets.html#Retrieve_Tweets.get_tweets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Retrieve_Tweets.Retrieve_Tweets.get_tweets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store any tweets that match the search parameters</p>
@@ -400,7 +453,7 @@ Concurrently running modules are handled with pythons threading library</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Documentation for the code</a><ul>
+<li><a class="reference internal" href="#">Code Documentation</a><ul>
 <li><a class="reference internal" href="#module-main">Main</a><ul>
 <li><a class="reference internal" href="#how-to-use-this-module">How To Use This Module</a></li>
 </ul>
