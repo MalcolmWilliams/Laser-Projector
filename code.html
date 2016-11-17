@@ -76,17 +76,91 @@
 </div>
 <div class="section" id="module-Openlase_Driver">
 <span id="openlase-driver"></span><h2>Openlase_Driver<a class="headerlink" href="#module-Openlase_Driver" title="Permalink to this headline">¶</a></h2>
-<p>this is a test docstring for the Openlase_Driver module</p>
+<p>OpenLase is an open source library and toolkit for controlling laser scanners. It has an emphasis on real-time operation and integration with audio, and it uses the JACK Audio Connection Kit as a backend.</p>
+<p>Features include:</p>
+<ul class="simple">
+<li>Classic OpenGL-like API</li>
+<li>Support for ILDA format sprites</li>
+<li>SVG to ILDA converter</li>
+<li>Built-in vector font</li>
+<li>Realtime bitmap tracer (edge detection)</li>
+<li>Python bindings</li>
+<li>Video player (using the bitmap tracer)</li>
+<li>Output processor GUI with perspective correction (projecting from an angle) and level controls.</li>
+</ul>
+<p>More information can be found at: <a class="reference external" href="https://marcan.st/projects/openlase/">https://marcan.st/projects/openlase/</a> or <a class="reference external" href="https://github.com/marcan/openlase">https://github.com/marcan/openlase</a></p>
+<dl class="class">
+<dt id="Openlase_Driver.Openlase_Driver">
+<em class="property">class </em><code class="descclassname">Openlase_Driver.</code><code class="descname">Openlase_Driver</code><a class="reference internal" href="_modules/Openlase_Driver.html#Openlase_Driver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Openlase_Driver.Openlase_Driver" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class is a driver to provide an easier way to access the openlase functions</p>
+<dl class="method">
+<dt id="Openlase_Driver.Openlase_Driver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Openlase_Driver.html#Openlase_Driver.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Openlase_Driver.Openlase_Driver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes an instance of the driver</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Openlase_Driver.Openlase_Driver.get_tweet_string">
+<code class="descname">get_tweet_string</code><span class="sig-paren">(</span><em>tweet_words</em>, <em>count=-1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Openlase_Driver.html#Openlase_Driver.get_tweet_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Openlase_Driver.Openlase_Driver.get_tweet_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reformats a list of words into a string</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>tweet_words: A list of strings that make up the full tweet
+count: How many of the words are to be used for the string</dd>
+<dt>Returns:</dt>
+<dd>String reformatted like the original tweet</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Openlase_Driver.Openlase_Driver.segment_message">
+<code class="descname">segment_message</code><span class="sig-paren">(</span><em>tweet_string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Openlase_Driver.html#Openlase_Driver.segment_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Openlase_Driver.Openlase_Driver.segment_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format the tweet so it will be properly output by the laser writer</p>
+<dl class="docutils">
+<dt>Args: </dt>
+<dd>tweet_string: string containing the message with no formatting</dd>
+<dt>Returns: </dt>
+<dd>list of strings that are cut to appropriate lengths</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Openlase_Driver.Openlase_Driver.write_tweet">
+<code class="descname">write_tweet</code><span class="sig-paren">(</span><em>tweet_string</em>, <em>time_run</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Openlase_Driver.html#Openlase_Driver.write_tweet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Openlase_Driver.Openlase_Driver.write_tweet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a 140 character max message with lasers</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>tweet_string: String that contains the message (tweet)
+time_run: How long the message will be displayed. The function will exit when the time runs out</dd>
+<dt>Returns: </dt>
+<dd>None</dd>
+<dt>Note:</dt>
+<dd>Calls openlase functions that will send the data through JACK to the laser galvos and the simulator</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-Select_Tweet">
 <span id="select-tweet"></span><h2>Select_Tweet<a class="headerlink" href="#module-Select_Tweet" title="Permalink to this headline">¶</a></h2>
 <p>This program selects a tweet from the list that retrieve_tweet constantly updates. 
 in the future there can be some type of algorithm to select the &#8220;hottest&#8221; one to display (reddit style)
 for now it is placeholder and chooses the latest tweet</p>
+<dl class="class">
+<dt id="Select_Tweet.Select_Tweet">
+<em class="property">class </em><code class="descclassname">Select_Tweet.</code><code class="descname">Select_Tweet</code><span class="sig-paren">(</span><em>mention_account='&#64;malcolm_test'</em>, <em>tweets_filename='./output.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-Retrieve_Tweets">
 <span id="retrieve-tweet"></span><h2>Retrieve_Tweet<a class="headerlink" href="#module-Retrieve_Tweets" title="Permalink to this headline">¶</a></h2>
 <p>Retrieve tweets using the Twitter API</p>
+<dl class="class">
+<dt id="Retrieve_Tweets.Retrieve_Tweets">
+<em class="property">class </em><code class="descclassname">Retrieve_Tweets.</code><code class="descname">Retrieve_Tweets</code><span class="sig-paren">(</span><em>black_list</em>, <em>mention_account='&#64;malcolm_test'</em>, <em>retrieval_count='20'</em>, <em>filter_='filter:safe'</em>, <em>lang='en'</em>, <em>tweets_filename='output.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Retrieve_Tweets.html#Retrieve_Tweets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Retrieve_Tweets.Retrieve_Tweets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 
