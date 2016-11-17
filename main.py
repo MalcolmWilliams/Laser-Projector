@@ -92,6 +92,7 @@ class Laser_Writer:
     def demo(self):
         """
         Demos two ways the program can be used. 
+        
         1. Select and display a random tweet
         2. Directly enter a message into the command prompt
 
