@@ -11,7 +11,7 @@ Introduction
 
 **Description:** A laser writer that uses `mirror galvonometers <https://en.wikipedia.org/wiki/Mirror_galvanometer>`_ to control a laser beam and write tweets on distant objects
 
-Source code available here https://github.com/MalcolmWilliams/Laser-Writer
+Source code is hosted on `github <https://github.com/MalcolmWilliams/Laser-Writer>`_
 
 
 Helper Modules:
