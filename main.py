@@ -91,9 +91,10 @@ class Laser_Writer:
 
     def demo(self):
         """
-        Demos two ways the program can be used. 
-        | 1. Select and display a random tweet
-        | 2. Directly enter a message into the command prompt
+        There are two sections to the demo: 
+        
+        1. Select and display a random tweet
+        2. Directly enter a message into the command prompt
 
         The function will start by randomly showing tweets. Hit ```ctrl-c``` to switch to keyboard promt. Hit ```crtl-c``` again to exit
         """
