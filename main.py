@@ -1,9 +1,6 @@
 """
 This is the main function that controls the flow of all the other processes. 
 
-This module defines the following class:
-- `Laser_Writer` contains the functions to control data flow
-
 How To Use This Module
 ----------------------
 

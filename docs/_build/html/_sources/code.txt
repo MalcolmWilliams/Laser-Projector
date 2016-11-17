@@ -16,7 +16,6 @@ Openlase_Driver
 Select_Tweet
 ============
 .. automodule:: Select_Tweet
-.. autoclass:: Select_Tweet
     :members:
 
 Retrieve_Tweets

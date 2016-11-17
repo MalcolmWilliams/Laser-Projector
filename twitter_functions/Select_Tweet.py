@@ -1,15 +1,15 @@
 
 """
-Select a tweet from the pool of potential tweets based on a predetermined algorithm.
-The pool of tweets are stored in ```output.txt``` in JSON format
+| Select a tweet from the pool of potential tweets based on a predetermined algorithm.
+| The pool of tweets are stored in ``output.txt`` in JSON format
 
-Currently the most advanced selection method is ```select_random_tweet_id()```
-Future implementations will include more intelligent tweet selections based on a number of factors, such as:
-- Location
-- Time
-- Subjet Matter
-- Number of favorites/retweets
-- Hashtags
+| Currently the most advanced selection method is ``select_random_tweet_id()``
+| Future implementations will include more intelligent tweet selections based on a number of factors, such as:
+| - Location
+| - Time
+| - Subjet Matter
+| - Number of favorites/retweets
+| - Hashtags
 """
 
 __docformat__='restructuredtext'

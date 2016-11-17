@@ -2,9 +2,9 @@
 Twitter offers a comprehensive set REST APIs to provide programmatic access to read and write Twitter data. More information is avaiable at the following `link <https://dev.twitter.com/rest/public>`_
 
 Several other sources were used to write the Retrive_Tweet module:
-- Tutorial: http://socialmedia-class.org/twittertutorial.html
-- Python Library: https://pypi.python.org/pypi/twitter
-- Search API query docs: https://dev.twitter.com/rest/public/search
+| - Tutorial: http://socialmedia-class.org/twittertutorial.html
+| - Python Library: https://pypi.python.org/pypi/twitter
+| - Search API query docs: https://dev.twitter.com/rest/public/search
 """
 
 __docformat__='restructuredtext'
@@ -78,9 +78,9 @@ class Retrieve_Tweets:
             | *None*
 
         **Note:**
-            | Stores discovered tweets in file determined by ```tweets_filename```
-            | Prints out tweet id whenever a new tweet is found
-            | Successive searches will only look for tweets that have come in since the last search
+            | - Stores discovered tweets in file determined by ```tweets_filename```
+            | - Prints out tweet id whenever a new tweet is found
+            | - Successive searches will only look for tweets that have come in since the last search
         """
         tweets = self.twitter.search.tweets(q=self.query, count=self.retrieval_count)
         #tweets = json.dumps(tweets)

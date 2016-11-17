@@ -47,8 +47,6 @@
 <div class="section" id="module-main">
 <span id="main"></span><h2>Main<a class="headerlink" href="#module-main" title="Permalink to this headline">¶</a></h2>
 <p>This is the main function that controls the flow of all the other processes.</p>
-<p>This module defines the following class:
-- <cite>Laser_Writer</cite> contains the functions to control data flow</p>
 <div class="section" id="how-to-use-this-module">
 <h3>How To Use This Module<a class="headerlink" href="#how-to-use-this-module" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
@@ -182,15 +180,19 @@ Concurrently running modules are handled with pythons threading library</p>
 </div>
 <div class="section" id="module-Select_Tweet">
 <span id="select-tweet"></span><h2>Select_Tweet<a class="headerlink" href="#module-Select_Tweet" title="Permalink to this headline">¶</a></h2>
-<p>Select a tweet from the pool of potential tweets based on a predetermined algorithm.
-The pool of tweets are stored in <code class="docutils literal"><span class="pre">`output.txt`</span></code> in JSON format</p>
-<p>Currently the most advanced selection method is <code class="docutils literal"><span class="pre">`select_random_tweet_id()`</span></code>
-Future implementations will include more intelligent tweet selections based on a number of factors, such as:
-- Location
-- Time
-- Subjet Matter
-- Number of favorites/retweets
-- Hashtags</p>
+<div class="line-block">
+<div class="line">Select a tweet from the pool of potential tweets based on a predetermined algorithm.</div>
+<div class="line">The pool of tweets are stored in <code class="docutils literal"><span class="pre">output.txt</span></code> in JSON format</div>
+</div>
+<div class="line-block">
+<div class="line">Currently the most advanced selection method is <code class="docutils literal"><span class="pre">select_random_tweet_id()</span></code></div>
+<div class="line">Future implementations will include more intelligent tweet selections based on a number of factors, such as:</div>
+<div class="line">- Location</div>
+<div class="line">- Time</div>
+<div class="line">- Subjet Matter</div>
+<div class="line">- Number of favorites/retweets</div>
+<div class="line">- Hashtags</div>
+</div>
 <dl class="class">
 <dt id="Select_Tweet.Select_Tweet">
 <em class="property">class </em><code class="descclassname">Select_Tweet.</code><code class="descname">Select_Tweet</code><span class="sig-paren">(</span><em>mention_account='&#64;malcolm_test'</em>, <em>tweets_filename='./output.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet" title="Permalink to this definition">¶</a></dt>
@@ -353,9 +355,9 @@ Future implementations will include more intelligent tweet selections based on a
 <span id="retrieve-tweets"></span><h2>Retrieve_Tweets<a class="headerlink" href="#module-Retrieve_Tweets" title="Permalink to this headline">¶</a></h2>
 <p>Twitter offers a comprehensive set REST APIs to provide programmatic access to read and write Twitter data. More information is avaiable at the following <a class="reference external" href="https://dev.twitter.com/rest/public">link</a></p>
 <p>Several other sources were used to write the Retrive_Tweet module:
-- Tutorial: <a class="reference external" href="http://socialmedia-class.org/twittertutorial.html">http://socialmedia-class.org/twittertutorial.html</a>
-- Python Library: <a class="reference external" href="https://pypi.python.org/pypi/twitter">https://pypi.python.org/pypi/twitter</a>
-- Search API query docs: <a class="reference external" href="https://dev.twitter.com/rest/public/search">https://dev.twitter.com/rest/public/search</a></p>
+| - Tutorial: <a class="reference external" href="http://socialmedia-class.org/twittertutorial.html">http://socialmedia-class.org/twittertutorial.html</a>
+| - Python Library: <a class="reference external" href="https://pypi.python.org/pypi/twitter">https://pypi.python.org/pypi/twitter</a>
+| - Search API query docs: <a class="reference external" href="https://dev.twitter.com/rest/public/search">https://dev.twitter.com/rest/public/search</a></p>
 <dl class="class">
 <dt id="Retrieve_Tweets.Retrieve_Tweets">
 <em class="property">class </em><code class="descclassname">Retrieve_Tweets.</code><code class="descname">Retrieve_Tweets</code><span class="sig-paren">(</span><em>black_list</em>, <em>mention_account='&#64;malcolm_test'</em>, <em>retrieval_count='20'</em>, <em>filter_='filter:safe'</em>, <em>lang='en'</em>, <em>tweets_filename='output.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Retrieve_Tweets.html#Retrieve_Tweets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Retrieve_Tweets.Retrieve_Tweets" title="Permalink to this definition">¶</a></dt>
@@ -377,9 +379,9 @@ Future implementations will include more intelligent tweet selections based on a
 </dd>
 <dt><strong>Note:</strong></dt>
 <dd><div class="first last line-block">
-<div class="line">Stores discovered tweets in file determined by <code class="docutils literal"><span class="pre">`tweets_filename`</span></code></div>
-<div class="line">Prints out tweet id whenever a new tweet is found</div>
-<div class="line">Successive searches will only look for tweets that have come in since the last search</div>
+<div class="line">- Stores discovered tweets in file determined by <code class="docutils literal"><span class="pre">`tweets_filename`</span></code></div>
+<div class="line">- Prints out tweet id whenever a new tweet is found</div>
+<div class="line">- Successive searches will only look for tweets that have come in since the last search</div>
 </div>
 </dd>
 </dl>
