@@ -24,6 +24,19 @@ then in new window (ctrl-shift-t) enter the venv enviroment ('''source venv/bin/
 run the main.py file. ('''python main.py''')
 You might need to click the patchbay button in jack and activate all the connections (see the jack tutorial for setting up the connections)
 
+
+Autodocumentation:
+There is documentation managed through sphinx. 
+The documentation is hosted with github pages.
+To update/push documentation changes:
+1. navigate to docs directory
+2. generate new html with ```make html```
+3. add the changes ``git add```
+4. commit the changes ```git commit -m "this is an example commit```
+5. push the changes to the github pages branch: ```git subtree push --prefix docs/_build/html origin gh-pages```
+    Note that an alias can be made in your gitconfig file if you are lazy
+
+
 Lasershark protocol:
 r=1000 # THIS MUST BE THE FIRST LINE IN THE FILE!
 The "r=number" command sets the speed in points per second (pps) at which samples are displayed by the Lasershark. 
