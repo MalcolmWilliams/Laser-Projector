@@ -8,8 +8,7 @@ Venv
 ++++
 1. You will need to install venv ``pip install virtualenv --user`` or ``sudo apt-get install python-virtualenv``
 2. Then activate venv before working on the project ``source venv/bin/activate``
-Venv makes managing the python dependancies much easier. 
-Flask offers a good explanation of venv here: http://flask.pocoo.org/docs/0.11/installation/
+| *Note:* Venv makes managing the python dependancies much easier. Flask offers a good explanation of venv here: http://flask.pocoo.org/docs/0.11/installation/
 
 Twitter
 +++++++
@@ -18,12 +17,12 @@ If you need to setup your own Twitter API tokens, follow the instructions here: 
 
 Openlase
 ++++++++
-Follow the instructions here: https://github.com/marcan/openlase/wiki/Installation
-*Note:* This for reference only because I should be including all the compiled files in the project. 
+| Follow the instructions here: https://github.com/marcan/openlase/wiki/Installation
+| *Note:* This for reference only because I should be including all the compiled files in the project. 
 
 
-Usuage
-======
+Usage
+=====
 | 1. Run ``./start_ol_services`` This will start all of the openlase and jack utilities (output control, jack, simulator, lasershark_jack)
 | 2. Then in new window (``ctrl-shift-t``) enter the venv enviroment: ``source venv/bin/activate``
 | 3. Run the main.py file ``python main.py``
