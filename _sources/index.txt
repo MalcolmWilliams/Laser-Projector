@@ -13,6 +13,9 @@ Contents:
     
     code.rst
 
+This is a test
+==============
+
 Indices and tables
 ==================
 
