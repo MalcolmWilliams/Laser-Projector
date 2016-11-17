@@ -1,4 +1,18 @@
-#This is the main funciton that starts all the other processes.
+"""
+This is the main function that controls the flow of all the other processes. 
+
+This module defines the following class:
+- `Laser_Writer` contains the functions to control writing flow
+
+How To Use This Module
+======================
+
+1. Activate venv: ``source venv/bin/activate``
+2. Start support services: ``./start_ol_services.hs``
+3. Run it: ``python main.py``
+"""
+
+__docformat__ = 'restructuredtext'
 
 from twitter_functions import Select_Tweet
 from twitter_functions import Retrieve_Tweets
@@ -7,8 +21,22 @@ import threading        #threadign for the tweet retrieval to run concurrently.
 import time
 
 class Laser_Writer:
+    
+    """
+    A laser writer that uses laser galvonometers (TODO: link to wikipedia) to write tweets on distant objects
+
+    Several modules aid the functionality:
+    - `Select_Tweet` (TODO: link to Select_Tweet) Selects a tweet from a pool of available tweets based on certain characteristics
+    - `Retrieve_Tweets` (TODO: link to Retrieve_Tweets) using twitter's API retrieve tweets aimed at the desired source, perform black listing and store the tweet data in a text file
+    - `Openlase_Driver` (TODO: link to Openlase_Driver) provide an abstraction layer on the openlase library. The tweet text is sent here and is then formatted and sent to the laser
+    """
 
     def __init__(self):
+        """
+        Initilise a Laser_Writer object
+        """
+
+
         #init the needed functions. 
         
         #Properties of the search

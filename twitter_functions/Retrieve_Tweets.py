@@ -1,3 +1,9 @@
+"""
+Retrieve tweets using the Twitter API
+"""
+
+__docformat__='restructuredtext'
+
 # Import the necessary package to process data in JSON format
 try:
     import json

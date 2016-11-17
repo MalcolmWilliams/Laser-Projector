@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentation for the code &#8212; Laser-Writer 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Laser-Writer 0.1 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to Laser-Writer’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="documentation-for-the-code">
+<h1>Documentation for the code<a class="headerlink" href="#documentation-for-the-code" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-main">
+<span id="main"></span><h2>Main<a class="headerlink" href="#module-main" title="Permalink to this headline">¶</a></h2>
+<p>This is the main function that controls the flow of all the other processes.</p>
+<p>This module defines the following class:
+- <cite>Laser_Writer</cite> contains the functions to control writing flow</p>
+<div class="section" id="how-to-use-this-module">
+<h3>How To Use This Module<a class="headerlink" href="#how-to-use-this-module" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Activate venv: <code class="docutils literal"><span class="pre">source</span> <span class="pre">venv/bin/activate</span></code></li>
+<li>Start support services: <code class="docutils literal"><span class="pre">./start_ol_services.hs</span></code></li>
+<li>Run it: <code class="docutils literal"><span class="pre">python</span> <span class="pre">main.py</span></code></li>
+</ol>
+</div>
+<dl class="class">
+<dt id="main.Laser_Writer">
+<em class="property">class </em><code class="descclassname">main.</code><code class="descname">Laser_Writer</code><a class="reference internal" href="_modules/main.html#Laser_Writer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Laser_Writer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A laser writer that uses laser galvonometers (TODO: link to wikipedia) to write tweets on distant objects</p>
+<p>Several modules aid the functionality:
+- <cite>Select_Tweet</cite> (TODO: link to Select_Tweet) Selects a tweet from a pool of available tweets based on certain characteristics
+- <cite>Retrieve_Tweets</cite> (TODO: link to Retrieve_Tweets) using twitter&#8217;s API retrieve tweets aimed at the desired source, perform black listing and store the tweet data in a text file
+- <cite>Openlase_Driver</cite> (TODO: link to Openlase_Driver) provide an abstraction layer on the openlase library. The tweet text is sent here and is then formatted and sent to the laser</p>
+<dl class="method">
+<dt id="main.Laser_Writer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Laser_Writer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Laser_Writer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initilise a Laser_Writer object</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Openlase_Driver">
+<span id="openlase-driver"></span><h2>Openlase_Driver<a class="headerlink" href="#module-Openlase_Driver" title="Permalink to this headline">¶</a></h2>
+<p>this is a test docstring for the Openlase_Driver module</p>
+</div>
+<div class="section" id="module-Select_Tweet">
+<span id="select-tweet"></span><h2>Select_Tweet<a class="headerlink" href="#module-Select_Tweet" title="Permalink to this headline">¶</a></h2>
+<p>This program selects a tweet from the list that retrieve_tweet constantly updates. 
+in the future there can be some type of algorithm to select the &#8220;hottest&#8221; one to display (reddit style)
+for now it is placeholder and chooses the latest tweet</p>
+</div>
+<div class="section" id="module-Retrieve_Tweets">
+<span id="retrieve-tweet"></span><h2>Retrieve_Tweet<a class="headerlink" href="#module-Retrieve_Tweets" title="Permalink to this headline">¶</a></h2>
+<p>Retrieve tweets using the Twitter API</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Documentation for the code</a><ul>
+<li><a class="reference internal" href="#module-main">Main</a><ul>
+<li><a class="reference internal" href="#how-to-use-this-module">How To Use This Module</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-Openlase_Driver">Openlase_Driver</a></li>
+<li><a class="reference internal" href="#module-Select_Tweet">Select_Tweet</a></li>
+<li><a class="reference internal" href="#module-Retrieve_Tweets">Retrieve_Tweet</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Laser-Writer&#8217;s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/code.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Malcolm Williams.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/code.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

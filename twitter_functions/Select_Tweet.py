@@ -1,6 +1,15 @@
-#This program selects a tweet from the list that retrieve_tweet constantly updates. 
-#in the future there can be some type of algorithm to select the "hottest" one to display (reddit style)
-#for now it is placeholder and chooses the latest tweet
+
+"""
+This program selects a tweet from the list that retrieve_tweet constantly updates. 
+in the future there can be some type of algorithm to select the "hottest" one to display (reddit style)
+for now it is placeholder and chooses the latest tweet
+"""
+
+__docformat__='restructuredtext'
+
+
+
+
 
 # Import the necessary package to process data in JSON format
 try:
