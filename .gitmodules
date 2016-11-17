@@ -1,5 +1,5 @@
 [submodule "openlase"]
-	path = openlase
+	path = openlase/openlase
 	url = https://github.com/marcan/openlase.git
 [submodule "lasershark_hostapp"]
 	path = lasershark_hostapp
