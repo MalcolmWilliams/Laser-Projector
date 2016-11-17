@@ -47,9 +47,9 @@
 <span class="sd">Twitter offers a comprehensive set REST APIs to provide programmatic access to read and write Twitter data. More information is avaiable at the following `link &lt;https://dev.twitter.com/rest/public&gt;`_</span>
 
 <span class="sd">Several other sources were used to write the Retrive_Tweet module:</span>
-<span class="sd">- Tutorial: http://socialmedia-class.org/twittertutorial.html</span>
-<span class="sd">- Python Library: https://pypi.python.org/pypi/twitter</span>
-<span class="sd">- Search API query docs: https://dev.twitter.com/rest/public/search</span>
+<span class="sd">| - Tutorial: http://socialmedia-class.org/twittertutorial.html</span>
+<span class="sd">| - Python Library: https://pypi.python.org/pypi/twitter</span>
+<span class="sd">| - Search API query docs: https://dev.twitter.com/rest/public/search</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="n">__docformat__</span><span class="o">=</span><span class="s1">&#39;restructuredtext&#39;</span>
@@ -123,9 +123,9 @@
 <span class="sd">            | *None*</span>
 
 <span class="sd">        **Note:**</span>
-<span class="sd">            | Stores discovered tweets in file determined by ```tweets_filename```</span>
-<span class="sd">            | Prints out tweet id whenever a new tweet is found</span>
-<span class="sd">            | Successive searches will only look for tweets that have come in since the last search</span>
+<span class="sd">            | - Stores discovered tweets in file determined by ```tweets_filename```</span>
+<span class="sd">            | - Prints out tweet id whenever a new tweet is found</span>
+<span class="sd">            | - Successive searches will only look for tweets that have come in since the last search</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">tweets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">twitter</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">tweets</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">retrieval_count</span><span class="p">)</span>
         <span class="c1">#tweets = json.dumps(tweets)</span>
