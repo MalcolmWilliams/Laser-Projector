@@ -17,8 +17,10 @@ Select_Tweet
 ============
 .. automodule:: Select_Tweet
 .. autoclass:: Select_Tweet
+    :members:
 
 Retrieve_Tweets
 ===============
 .. automodule:: Retrieve_Tweets
 .. autoclass:: Retrieve_Tweets
+    :members:

@@ -182,22 +182,210 @@ Concurrently running modules are handled with pythons threading library</p>
 </div>
 <div class="section" id="module-Select_Tweet">
 <span id="select-tweet"></span><h2>Select_Tweet<a class="headerlink" href="#module-Select_Tweet" title="Permalink to this headline">¶</a></h2>
-<p>This program selects a tweet from the list that retrieve_tweet constantly updates. 
-in the future there can be some type of algorithm to select the &#8220;hottest&#8221; one to display (reddit style)
-for now it is placeholder and chooses the latest tweet</p>
+<p>Select a tweet from the pool of potential tweets based on a predetermined algorithm.
+The pool of tweets are stored in <code class="docutils literal"><span class="pre">`output.txt`</span></code> in JSON format</p>
+<p>Currently the most advanced selection method is <code class="docutils literal"><span class="pre">`select_random_tweet_id()`</span></code>
+Future implementations will include more intelligent tweet selections based on a number of factors, such as:
+- Location
+- Time
+- Subjet Matter
+- Number of favorites/retweets
+- Hashtags</p>
 <dl class="class">
 <dt id="Select_Tweet.Select_Tweet">
 <em class="property">class </em><code class="descclassname">Select_Tweet.</code><code class="descname">Select_Tweet</code><span class="sig-paren">(</span><em>mention_account='&#64;malcolm_test'</em>, <em>tweets_filename='./output.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Select a tweet from the pool of potential candidates</p>
+<dl class="method">
+<dt id="Select_Tweet.Select_Tweet.get_random_tweet_text">
+<code class="descname">get_random_tweet_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet.get_random_tweet_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet.get_random_tweet_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simplifies process of getting random tweet text</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>None</em></div>
+</div>
+</dd>
+<dt><strong>Returns:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">tweet string or error message</div>
+</div>
+</dd>
+<dt><strong>Note:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">Also refreshes pool</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Select_Tweet.Select_Tweet.get_tweet_by_id">
+<code class="descname">get_tweet_by_id</code><span class="sig-paren">(</span><em>target_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet.get_tweet_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet.get_tweet_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a tweet given a specific ID</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>target_id:</em> ID of the target tweet</div>
+</div>
+</dd>
+<dt><strong>Returns:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">JSON tweet object, or None</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Select_Tweet.Select_Tweet.get_tweet_text">
+<code class="descname">get_tweet_text</code><span class="sig-paren">(</span><em>tweet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet.get_tweet_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet.get_tweet_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>retrieve text from JSON tweet object</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>tweet:</em> JSON tweet object</div>
+</div>
+</dd>
+<dt><strong>Returns:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">tweet string or error message</div>
+</div>
+</dd>
+<dt><strong>Note:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">Also does some formatting</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Select_Tweet.Select_Tweet.print_file">
+<code class="descname">print_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet.print_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet.print_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the entire pool of tweets in human readable format</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>None</em></div>
+</div>
+</dd>
+<dt><strong>Returns:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>None</em></div>
+</div>
+</dd>
+<dt><strong>Note:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">Will print out to terminal</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Select_Tweet.Select_Tweet.refresh_tweets">
+<code class="descname">refresh_tweets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet.refresh_tweets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet.refresh_tweets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the output.txt file and builds an internal pool of tweet data</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>None</em></div>
+</div>
+</dd>
+<dt><strong>Returns:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">None</div>
+</div>
+</dd>
+<dt><strong>Note:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">Used for initial pool building and refreshing</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Select_Tweet.Select_Tweet.select_random_tweet">
+<code class="descname">select_random_tweet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet.select_random_tweet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet.select_random_tweet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a tweet random tweet from the pool</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>None</em></div>
+</div>
+</dd>
+<dt><strong>Returns:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">JSON tweet object</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Select_Tweet.Select_Tweet.self_test">
+<code class="descname">self_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Select_Tweet.html#Select_Tweet.self_test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Select_Tweet.Select_Tweet.self_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Easily test functionality. Grabs 1 specific tweet.</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>None</em></div>
+</div>
+</dd>
+<dt><strong>Returns:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">Tweet string or error message</div>
+</div>
+</dd>
+<dt><strong>Note:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">Also refreshes pool</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
 
 </div>
 <div class="section" id="module-Retrieve_Tweets">
 <span id="retrieve-tweets"></span><h2>Retrieve_Tweets<a class="headerlink" href="#module-Retrieve_Tweets" title="Permalink to this headline">¶</a></h2>
-<p>Retrieve tweets using the Twitter API</p>
+<p>Twitter offers a comprehensive set REST APIs to provide programmatic access to read and write Twitter data. More information is avaiable at the following <a class="reference external" href="https://dev.twitter.com/rest/public">link</a></p>
+<p>Several other sources were used to write the Retrive_Tweet module:
+- Tutorial: <a class="reference external" href="http://socialmedia-class.org/twittertutorial.html">http://socialmedia-class.org/twittertutorial.html</a>
+- Python Library: <a class="reference external" href="https://pypi.python.org/pypi/twitter">https://pypi.python.org/pypi/twitter</a>
+- Search API query docs: <a class="reference external" href="https://dev.twitter.com/rest/public/search">https://dev.twitter.com/rest/public/search</a></p>
 <dl class="class">
 <dt id="Retrieve_Tweets.Retrieve_Tweets">
 <em class="property">class </em><code class="descclassname">Retrieve_Tweets.</code><code class="descname">Retrieve_Tweets</code><span class="sig-paren">(</span><em>black_list</em>, <em>mention_account='&#64;malcolm_test'</em>, <em>retrieval_count='20'</em>, <em>filter_='filter:safe'</em>, <em>lang='en'</em>, <em>tweets_filename='output.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Retrieve_Tweets.html#Retrieve_Tweets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Retrieve_Tweets.Retrieve_Tweets" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p><a class="reference external" href="https://dev.twitter.com/rest/public">https://dev.twitter.com/rest/public</a></p>
+<dl class="method">
+<dt id="Retrieve_Tweets.Retrieve_Tweets.get_tweets">
+<code class="descname">get_tweets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Retrieve_Tweets.html#Retrieve_Tweets.get_tweets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Retrieve_Tweets.Retrieve_Tweets.get_tweets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store any tweets that match the search parameters</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>None</em></div>
+</div>
+</dd>
+<dt><strong>Returns:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line"><em>None</em></div>
+</div>
+</dd>
+<dt><strong>Note:</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">Stores discovered tweets in file determined by <code class="docutils literal"><span class="pre">`tweets_filename`</span></code></div>
+<div class="line">Prints out tweet id whenever a new tweet is found</div>
+<div class="line">Successive searches will only look for tweets that have come in since the last search</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
 
 </div>
 </div>
