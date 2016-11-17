@@ -104,18 +104,18 @@
         <span class="n">ol</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="n">ol</span><span class="o">.</span><span class="n">getDefaultFont</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Openlase_Driver.write_tweet"><a class="viewcode-back" href="../code.html#Openlase_Driver.Openlase_Driver.write_tweet">[docs]</a>    <span class="k">def</span> <span class="nf">write_tweet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tweet_string</span><span class="p">,</span> <span class="n">time_run</span><span class="p">):</span>
+<div class="viewcode-block" id="Openlase_Driver.write_tweet"><a class="viewcode-back" href="../code.html#Openlase_Driver.Openlase_Driver.write_tweet">[docs]</a>    <span class="k">def</span> <span class="nf">write_tweet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tweet_string</span><span class="p">,</span> <span class="n">time_display</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Displays a 140 character max message with lasers</span>
 
-<span class="sd">        Args:</span>
-<span class="sd">            tweet_string: String that contains the message (tweet)</span>
-<span class="sd">            time_run: How long the message will be displayed. The function will exit when the time runs out</span>
+<span class="sd">        **Args:**</span>
+<span class="sd">            *tweet_string:* String that contains the message (tweet)</span>
+<span class="sd">            *time_display:* How long the message will be displayed. The function will exit when the time runs out</span>
 
-<span class="sd">        Returns: </span>
-<span class="sd">            None</span>
+<span class="sd">        **Returns:**</span>
+<span class="sd">            *None*</span>
 
-<span class="sd">        Note:</span>
+<span class="sd">        **Note:**</span>
 <span class="sd">            Calls openlase functions that will send the data through JACK to the laser galvos and the simulator</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         
@@ -131,7 +131,7 @@
         <span class="n">frames</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">print_output</span> <span class="o">=</span> <span class="kc">True</span>
 
-        <span class="n">t_end</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="n">time_run</span>
+        <span class="n">t_end</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="n">time_display</span>
         <span class="k">while</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">t_end</span><span class="p">):</span>
             <span class="n">tweet_segments</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">segment_message</span><span class="p">(</span><span class="n">tweet_string</span><span class="p">)</span>
             <span class="n">line_height</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -163,10 +163,10 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Format the tweet so it will be properly output by the laser writer</span>
 
-<span class="sd">        Args: </span>
-<span class="sd">            tweet_string: string containing the message with no formatting</span>
+<span class="sd">        **Args:** </span>
+<span class="sd">            *tweet_string:* string containing the message with no formatting</span>
 
-<span class="sd">        Returns: </span>
+<span class="sd">        **Returns:** </span>
 <span class="sd">            list of strings that are cut to appropriate lengths</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         
@@ -194,11 +194,11 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Reformats a list of words into a string</span>
 <span class="sd">        </span>
-<span class="sd">        Args:</span>
-<span class="sd">            tweet_words: A list of strings that make up the full tweet</span>
-<span class="sd">            count: How many of the words are to be used for the string</span>
+<span class="sd">        **Args:**</span>
+<span class="sd">            *tweet_words:* A list of strings that make up the full tweet</span>
+<span class="sd">            *count:* How many of the words are to be used for the string</span>
 
-<span class="sd">        Returns:</span>
+<span class="sd">        **Returns:**</span>
 <span class="sd">            String reformatted like the original tweet</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">tweet_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>

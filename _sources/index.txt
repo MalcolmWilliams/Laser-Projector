@@ -6,6 +6,16 @@
 Welcome to Laser-Writer's documentation!
 ========================================
 
+Introduction:
+
+A laser writer that uses `mirror galvonometers <https://en.wikipedia.org/wiki/Mirror_galvanometer>`_ to control a laser beam and write tweets on distant objects
+
+Several modules aid the functionality:
+- `Select_Tweet <https://malcolmwilliams.github.io/Laser-Writer/code.html#module-Select_Tweet>`_ selects a tweet from a pool of available tweets based on certain characteristics
+- `Retrieve_Tweets <https://malcolmwilliams.github.io/Laser-Writer/code.html#module-Retrieve_Tweets>`_ uses twitter's API retrieve tweets aimed at the desired source, perform black listing and store the tweet data in a text file
+- `Openlase_Driver <https://malcolmwilliams.github.io/Laser-Writer/code.html#module-Openlase_Driver>`_  provide an abstraction layer on the openlase library. The tweet text is sent here and is then formatted and sent to the laser
+
+
 Contents:
 
 .. toctree::

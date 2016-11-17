@@ -48,7 +48,7 @@
 <span id="main"></span><h2>Main<a class="headerlink" href="#module-main" title="Permalink to this headline">¶</a></h2>
 <p>This is the main function that controls the flow of all the other processes.</p>
 <p>This module defines the following class:
-- <cite>Laser_Writer</cite> contains the functions to control writing flow</p>
+- <cite>Laser_Writer</cite> contains the functions to control data flow</p>
 <div class="section" id="how-to-use-this-module">
 <h3>How To Use This Module<a class="headerlink" href="#how-to-use-this-module" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
@@ -60,15 +60,48 @@
 <dl class="class">
 <dt id="main.Laser_Writer">
 <em class="property">class </em><code class="descclassname">main.</code><code class="descname">Laser_Writer</code><a class="reference internal" href="_modules/main.html#Laser_Writer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Laser_Writer" title="Permalink to this definition">¶</a></dt>
-<dd><p>A laser writer that uses laser galvonometers (TODO: link to wikipedia) to write tweets on distant objects</p>
-<p>Several modules aid the functionality:
-- <cite>Select_Tweet</cite> (TODO: link to Select_Tweet) Selects a tweet from a pool of available tweets based on certain characteristics
-- <cite>Retrieve_Tweets</cite> (TODO: link to Retrieve_Tweets) using twitter&#8217;s API retrieve tweets aimed at the desired source, perform black listing and store the tweet data in a text file
-- <cite>Openlase_Driver</cite> (TODO: link to Openlase_Driver) provide an abstraction layer on the openlase library. The tweet text is sent here and is then formatted and sent to the laser</p>
+<dd><p>This class calls all the necessary helper modules.
+Concurrently running modules are handled with pythons threading library</p>
 <dl class="method">
 <dt id="main.Laser_Writer.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Laser_Writer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Laser_Writer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initilise a Laser_Writer object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="main.Laser_Writer.demo">
+<code class="descname">demo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Laser_Writer.demo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Laser_Writer.demo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Demos two ways the program can be used. 
+1. Select and display a random tweet
+2. Directly enter a message into the command prompt</p>
+<p>The function will start by randomly showing tweets. Hit ctrl-c to switch to keyboard promt. Hit crtl-c again to exit</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="main.Laser_Writer.start_tweet_retrieval">
+<code class="descname">start_tweet_retrieval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Laser_Writer.start_tweet_retrieval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Laser_Writer.start_tweet_retrieval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Continuously check for new tweets with the matching criteria</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><em>None</em></dd>
+<dt><strong>Returns:</strong></dt>
+<dd><em>None</em></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="main.Laser_Writer.write_tweet">
+<code class="descname">write_tweet</code><span class="sig-paren">(</span><em>tweet='This is the default tweet'</em>, <em>time_display=10</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Laser_Writer.write_tweet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Laser_Writer.write_tweet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will send a tweet to the laser to be written</p>
+<dl class="docutils">
+<dt><strong>Args:</strong></dt>
+<dd><em>tweet:</em> A 140 character max string to be sent to the laser
+<em>time_display:</em> How long the tweet will be displayed. When the time runs out the thread will terminate and the function will exit.</dd>
+<dt><strong>Returns:</strong></dt>
+<dd>None</dd>
+<dt><strong>Note:</strong></dt>
+<dd>Will print out the message to be displayed.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -104,10 +137,10 @@
 <code class="descname">get_tweet_string</code><span class="sig-paren">(</span><em>tweet_words</em>, <em>count=-1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Openlase_Driver.html#Openlase_Driver.get_tweet_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Openlase_Driver.Openlase_Driver.get_tweet_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reformats a list of words into a string</p>
 <dl class="docutils">
-<dt>Args:</dt>
-<dd>tweet_words: A list of strings that make up the full tweet
-count: How many of the words are to be used for the string</dd>
-<dt>Returns:</dt>
+<dt><strong>Args:</strong></dt>
+<dd><em>tweet_words:</em> A list of strings that make up the full tweet
+<em>count:</em> How many of the words are to be used for the string</dd>
+<dt><strong>Returns:</strong></dt>
 <dd>String reformatted like the original tweet</dd>
 </dl>
 </dd></dl>
@@ -117,24 +150,24 @@ count: How many of the words are to be used for the string</dd>
 <code class="descname">segment_message</code><span class="sig-paren">(</span><em>tweet_string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Openlase_Driver.html#Openlase_Driver.segment_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Openlase_Driver.Openlase_Driver.segment_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>Format the tweet so it will be properly output by the laser writer</p>
 <dl class="docutils">
-<dt>Args: </dt>
-<dd>tweet_string: string containing the message with no formatting</dd>
-<dt>Returns: </dt>
+<dt><strong>Args:</strong> </dt>
+<dd><em>tweet_string:</em> string containing the message with no formatting</dd>
+<dt><strong>Returns:</strong> </dt>
 <dd>list of strings that are cut to appropriate lengths</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="Openlase_Driver.Openlase_Driver.write_tweet">
-<code class="descname">write_tweet</code><span class="sig-paren">(</span><em>tweet_string</em>, <em>time_run</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Openlase_Driver.html#Openlase_Driver.write_tweet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Openlase_Driver.Openlase_Driver.write_tweet" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write_tweet</code><span class="sig-paren">(</span><em>tweet_string</em>, <em>time_display</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Openlase_Driver.html#Openlase_Driver.write_tweet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Openlase_Driver.Openlase_Driver.write_tweet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Displays a 140 character max message with lasers</p>
 <dl class="docutils">
-<dt>Args:</dt>
-<dd>tweet_string: String that contains the message (tweet)
-time_run: How long the message will be displayed. The function will exit when the time runs out</dd>
-<dt>Returns: </dt>
-<dd>None</dd>
-<dt>Note:</dt>
+<dt><strong>Args:</strong></dt>
+<dd><em>tweet_string:</em> String that contains the message (tweet)
+<em>time_display:</em> How long the message will be displayed. The function will exit when the time runs out</dd>
+<dt><strong>Returns:</strong></dt>
+<dd><em>None</em></dd>
+<dt><strong>Note:</strong></dt>
 <dd>Calls openlase functions that will send the data through JACK to the laser galvos and the simulator</dd>
 </dl>
 </dd></dl>
@@ -154,7 +187,7 @@ for now it is placeholder and chooses the latest tweet</p>
 
 </div>
 <div class="section" id="module-Retrieve_Tweets">
-<span id="retrieve-tweet"></span><h2>Retrieve_Tweet<a class="headerlink" href="#module-Retrieve_Tweets" title="Permalink to this headline">¶</a></h2>
+<span id="retrieve-tweets"></span><h2>Retrieve_Tweets<a class="headerlink" href="#module-Retrieve_Tweets" title="Permalink to this headline">¶</a></h2>
 <p>Retrieve tweets using the Twitter API</p>
 <dl class="class">
 <dt id="Retrieve_Tweets.Retrieve_Tweets">
@@ -179,7 +212,7 @@ for now it is placeholder and chooses the latest tweet</p>
 </li>
 <li><a class="reference internal" href="#module-Openlase_Driver">Openlase_Driver</a></li>
 <li><a class="reference internal" href="#module-Select_Tweet">Select_Tweet</a></li>
-<li><a class="reference internal" href="#module-Retrieve_Tweets">Retrieve_Tweet</a></li>
+<li><a class="reference internal" href="#module-Retrieve_Tweets">Retrieve_Tweets</a></li>
 </ul>
 </li>
 </ul>
