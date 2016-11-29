@@ -134,7 +134,7 @@
         <span class="n">t_end</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="n">time_display</span>
         <span class="k">while</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">t_end</span><span class="p">):</span>
             <span class="n">tweet_segments</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">segment_message</span><span class="p">(</span><span class="n">tweet_string</span><span class="p">)</span>
-            <span class="n">line_height</span> <span class="o">=</span> <span class="mf">0.5</span>
+            <span class="n">line_height</span> <span class="o">=</span> <span class="mf">0.9</span>
 
             <span class="c1">#Maybe can be moved to init?</span>
             <span class="n">ol</span><span class="o">.</span><span class="n">loadIdentity3</span><span class="p">()</span>
@@ -174,11 +174,11 @@
         <span class="n">tweet_words</span> <span class="o">=</span> <span class="n">tweet_string</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>      <span class="c1">#break the message up into words. </span>
         <span class="c1">#print tweet_words</span>
         <span class="c1">#not sure what the actual screen width is, use this as a placeholder.</span>
-        <span class="n">screen_width</span> <span class="o">=</span> <span class="mi">2</span>
-        <span class="n">w</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">screen_width</span> <span class="o">=</span> <span class="mf">1.9</span>
         <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>        
 
         <span class="k">while</span><span class="p">(</span> <span class="n">ol</span><span class="o">.</span><span class="n">getStringWidth</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tweet_string</span><span class="p">(</span><span class="n">tweet_words</span><span class="p">))</span> <span class="o">&gt;</span> <span class="n">screen_width</span><span class="p">):</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="k">while</span><span class="p">(</span><span class="n">w</span> <span class="o">&lt;</span> <span class="n">screen_width</span><span class="p">):</span>
                 <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
                 <span class="n">w</span> <span class="o">=</span> <span class="n">ol</span><span class="o">.</span><span class="n">getStringWidth</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tweet_string</span><span class="p">(</span><span class="n">tweet_words</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span>
@@ -214,7 +214,8 @@
 
 <span class="k">if</span><span class="p">(</span><span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">):</span>
     <span class="n">od</span> <span class="o">=</span> <span class="n">Openlase_Driver</span><span class="p">()</span>
-    <span class="n">od</span><span class="o">.</span><span class="n">write_tweet</span><span class="p">(</span><span class="s2">&quot;this is a test tweet, I am checking&quot;</span><span class="p">)</span><span class="c1"># how the segmentatation code will work. The character limit of 140 is kinda big.&quot;)</span>
+    <span class="k">while</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">od</span><span class="o">.</span><span class="n">write_tweet</span><span class="p">(</span><span class="s2">&quot;this is a test tweet, I am checking&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="c1"># how the segmentatation code will work. The character limit of 140 is kinda big.&quot;)</span>
     <span class="c1">#for line in lw.segment_message(&quot;this is a test tweet, I am checking how the segmentatation code will work. The character limit of 140 is kinda big.&quot;):</span>
     <span class="c1">#    print line.lstrip()</span>
 </pre></div>

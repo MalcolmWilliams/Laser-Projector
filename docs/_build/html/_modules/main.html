@@ -75,7 +75,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         
         <span class="c1">#Properties of the search</span>
-        <span class="n">mention_account</span> <span class="o">=</span> <span class="s1">&#39;@BarackObama&#39;</span>
+        <span class="n">mention_account</span> <span class="o">=</span> <span class="s1">&#39;@malcolm_test&#39;</span>
         <span class="n">retrieval_count</span> <span class="o">=</span> <span class="mi">20</span>
         <span class="n">black_list</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="c1">#tweets containing these words will be filtered out, add them in this format &quot;-shit -piss -fuck -cunt -cocksucker -motherfucker&quot;</span>
         <span class="n">filter_</span> <span class="o">=</span> <span class="s2">&quot;filter:safe&quot;</span>
@@ -105,7 +105,6 @@
 <span class="sd">        **Note:**</span>
 <span class="sd">            Will print out the message to be displayed.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">tweet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">st</span><span class="o">.</span><span class="n">get_random_tweet_text</span><span class="p">()</span>
         <span class="n">tweet</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="c1">#openlase library can only take ascii data</span>
         <span class="nb">print</span> <span class="s2">&quot;Output: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
         <span class="c1">#tweet = self.st.get_tweet_text(self.st.get_tweet_by_id(796082699215613952)) </span>
@@ -140,23 +139,29 @@
 
 <span class="sd">        The function will start by randomly showing tweets. Hit ``ctrl-c`` to switch to keyboard promt. Hit ``crtl-c`` again to exit</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">while</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;====================================================&quot;</span><span class="p">)</span>
-                <span class="nb">print</span> <span class="s2">&quot;Selecting a new random tweet&quot;</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">write_tweet</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">st</span><span class="o">.</span><span class="n">get_random_tweet_text</span><span class="p">(),</span> <span class="mi">5</span><span class="p">)</span>
-        
-        <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-            <span class="k">pass</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">while</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
-                <span class="c1">#get the users message:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;====================================================&quot;</span><span class="p">)</span>
-                <span class="n">message</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s2">&quot;Enter the desired message: &quot;</span><span class="p">)</span> 
-                <span class="bp">self</span><span class="o">.</span><span class="n">write_tweet</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-            <span class="k">pass</span>        </div></div>
-
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        try:</span>
+<span class="sd">            while(True):</span>
+<span class="sd">                print(&quot;====================================================&quot;)</span>
+<span class="sd">                print &quot;Selecting a new random tweet&quot;</span>
+<span class="sd">                self.write_tweet(self.st.get_random_tweet_text(), 5)</span>
+<span class="sd">        </span>
+<span class="sd">        except KeyboardInterrupt:</span>
+<span class="sd">            pass</span>
+<span class="sd">        </span>
+<span class="sd">        try:</span>
+<span class="sd">            while(True):</span>
+<span class="sd">                #get the users message:</span>
+<span class="sd">                print(&quot;====================================================&quot;)</span>
+<span class="sd">                message = raw_input(&quot;Enter the desired message: &quot;) </span>
+<span class="sd">                self.write_tweet(message, 0.1)</span>
+<span class="sd">        except KeyboardInterrupt:</span>
+<span class="sd">            pass </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">test_string</span> <span class="o">=</span> <span class="s2">&quot;1234567890 &quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">14</span><span class="p">):</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">test_string</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">write_tweet</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div></div>
 
 <span class="k">if</span><span class="p">(</span><span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">):</span>
     <span class="n">lw</span> <span class="o">=</span> <span class="n">Laser_Writer</span><span class="p">()</span>
