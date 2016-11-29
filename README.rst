@@ -24,7 +24,7 @@ Openlase
 Usage
 =====
 1. Run ``./start_ol_services`` This will start all of the openlase and jack utilities (output control, jack, simulator, lasershark_jack)
-2. Then in new window (``ctrl-shift-t``) enter the venv enviroment: ``source venv/bin/activate``
+2. Enter the venv enviroment: ``source venv/bin/activate``
 3. Run the main.py file ``python main.py``
 4. You might need to click the patchbay button in JACK and activate all the connections (see the jack tutorial for setting up the connections)
 

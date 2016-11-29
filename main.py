@@ -30,7 +30,7 @@ class Laser_Writer:
         """
         
         #Properties of the search
-        mention_account = '@BarackObama'
+        mention_account = '@malcolm_test'
         retrieval_count = 20
         black_list = "" #tweets containing these words will be filtered out, add them in this format "-shit -piss -fuck -cunt -cocksucker -motherfucker"
         filter_ = "filter:safe"
@@ -60,7 +60,6 @@ class Laser_Writer:
         **Note:**
             Will print out the message to be displayed.
         """
-        tweet = self.st.get_random_tweet_text()
         tweet = tweet.encode('ascii', 'ignore') #openlase library can only take ascii data
         print "Output: " + str(tweet)
         #tweet = self.st.get_tweet_text(self.st.get_tweet_by_id(796082699215613952)) 
@@ -95,6 +94,7 @@ class Laser_Writer:
 
         The function will start by randomly showing tweets. Hit ``ctrl-c`` to switch to keyboard promt. Hit ``crtl-c`` again to exit
         """
+        '''
         try:
             while(True):
                 print("====================================================")
@@ -103,15 +103,20 @@ class Laser_Writer:
         
         except KeyboardInterrupt:
             pass
+        
         try:
             while(True):
                 #get the users message:
                 print("====================================================")
                 message = raw_input("Enter the desired message: ") 
-                self.write_tweet(message, 5)
+                self.write_tweet(message, 0.1)
         except KeyboardInterrupt:
-            pass        
-
+            pass 
+        '''
+        test_string = "1234567890 "
+        for i in range(14):
+            temp = test_string*(i+1)
+            self.write_tweet(temp, 1)
 
 if(__name__ == "__main__"):
     lw = Laser_Writer()
