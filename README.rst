@@ -39,8 +39,8 @@ To update/push documentation changes:
 +++++++++++++++++++++++++++++++++++++
 | 1. Make changes to docstrings in code
 | 2. Navigate to docs directory
-| 3. Generate new html with: ``make html``
-| 4. Add the changes: ``git add``
+| 3. Generate new html with: ``make html`` (make sure you have activated ``venv``)
+| 4. Add the changes: ``git add .``
 | 4. Commit the changes: ``git commit -m "this is an example commit"``
 | 5. Push the changes to the github pages branch: ``git subtree push --prefix docs/_build/html origin gh-pages``
 | *Note:* an alias can be made in your gitconfig file if you are lazy
