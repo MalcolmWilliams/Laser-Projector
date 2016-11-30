@@ -1,21 +1,14 @@
 from openlase import Openlase_Driver
-from driver_instance import driver_instance
-import threading
 
+class driver_instance(object):
 
+    def __init__(self):
+        self.od = Openlase_Driver.Openlase_Driver()#this is what you send the tweets to
+        while(True)     #hold the thread open
 
-def write():
+    def write(self, message, time_display):
+        self.od.write_tweet(message, time_display)
 
-    di_0 = driver_instance()
-    di_0.write()
-
-    
-    #di_1 = driver_instance()
-    #di_1.write()
-
-    #while(True):
-    #    di_0.write()
-    #    #di_1.write()
 
 if(__name__ == "__main__"):
     '''
@@ -35,7 +28,12 @@ if(__name__ == "__main__"):
         od_0.write_tweet("test_o", 1)
         od_1.write_tweet("test_1", 1)
     '''
+    di_0 = driver_instance()
+    di_0.write()
+
     
-    t = threading.Thread(target = write)
-    #t.daemon=True
-    t.start()
+    di_1 = driver_instance()
+    di_1.write()
+
+    
+    di_0.write()

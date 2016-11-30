@@ -1,0 +1,86 @@
+test_0
+10.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_1
+10.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+Traceback (most recent call last):
+  File "argparse_test.py", line 16, in <module>
+    od.write_tweet(results.message, results.time_display)
+  File "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/Openlase_Driver.py", line 110, in write_tweet
+    ftime = ol.renderFrame(60)
+KeyboardInterrupt
+test_0
+10.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_1
+10.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_1
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_0
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_0
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_1
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_0
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_1
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_0
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_1
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_0
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_1
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_1
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997
+test_0
+1.0
+Playing back at 10000 Hz
+the maximum buffer size is now 213
+Frame time: 0.016667, FPS:59.999997

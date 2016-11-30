@@ -1,7 +1,7 @@
 <!DOCTYPE patchbay>
-<patchbay name="Dual_Lasershark_0" version="0.4.2">
+<patchbay version="0.4.2" name="Dual_Lasershark_0">
  <output-sockets>
-  <socket name="output 0" type="jack-audio" client="output" exclusive="off">
+  <socket type="jack-audio" name="output 0" exclusive="off" client="output">
    <plug>out_x</plug>
    <plug>out_y</plug>
    <plug>out_r</plug>
@@ -9,7 +9,7 @@
    <plug>out_b</plug>
    <plug>out_e</plug>
   </socket>
-  <socket name="libol 0" type="jack-audio" client="libol" exclusive="off">
+  <socket type="jack-audio" name="libol 0" exclusive="off" client="libol">
    <plug>out_x</plug>
    <plug>out_y</plug>
    <plug>out_r</plug>
@@ -18,7 +18,7 @@
    <plug>out_al</plug>
    <plug>out_ar</plug>
   </socket>
-  <socket name="output 1" type="jack-audio" client="output-01" exclusive="off">
+  <socket type="jack-audio" name="output 1" exclusive="off" client="output-01">
    <plug>out_x</plug>
    <plug>out_y</plug>
    <plug>out_r</plug>
@@ -26,7 +26,7 @@
    <plug>out_b</plug>
    <plug>out_e</plug>
   </socket>
-  <socket name="libol 1" type="jack-audio" client="libol-01" exclusive="off">
+  <socket type="jack-audio" name="libol 1" exclusive="off" client="libol-01">
    <plug>out_x</plug>
    <plug>out_y</plug>
    <plug>out_r</plug>
@@ -37,42 +37,42 @@
   </socket>
  </output-sockets>
  <input-sockets>
-  <socket name="simulator 0" type="jack-audio" client="simulator" exclusive="off">
+  <socket type="jack-audio" name="simulator 0" exclusive="off" client="simulator">
    <plug>in_x</plug>
    <plug>in_y</plug>
    <plug>in_r</plug>
    <plug>in_g</plug>
    <plug>in_b</plug>
   </socket>
-  <socket name="output 0" type="jack-audio" client="output" exclusive="off">
+  <socket type="jack-audio" name="output 0" exclusive="off" client="output">
    <plug>in_x</plug>
    <plug>in_y</plug>
    <plug>in_r</plug>
    <plug>in_g</plug>
    <plug>in_b</plug>
   </socket>
-  <socket name="lasershark 0" type="jack-audio" client="lasershark" exclusive="off">
+  <socket type="jack-audio" name="lasershark 0" exclusive="off" client="lasershark">
    <plug>in_x</plug>
    <plug>in_y</plug>
    <plug>in_g</plug>
    <plug>in_r</plug>
    <plug>in_b</plug>
   </socket>
-  <socket name="simulator 1" type="jack-audio" client="simulator-01" exclusive="off">
+  <socket type="jack-audio" name="simulator 1" exclusive="off" client="simulator-01">
    <plug>in_x</plug>
    <plug>in_y</plug>
    <plug>in_r</plug>
    <plug>in_g</plug>
    <plug>in_b</plug>
   </socket>
-  <socket name="output 1" type="jack-audio" client="output-01" exclusive="off">
+  <socket type="jack-audio" name="output 1" exclusive="off" client="output-01">
    <plug>in_x</plug>
    <plug>in_y</plug>
    <plug>in_r</plug>
    <plug>in_g</plug>
    <plug>in_b</plug>
   </socket>
-  <socket name="lasershark 1" type="jack-audio" client="lasershark-01" exclusive="off">
+  <socket type="jack-audio" name="lasershark 1" exclusive="off" client="lasershark-01">
    <plug>in_x</plug>
    <plug>in_y</plug>
    <plug>in_g</plug>
@@ -82,12 +82,12 @@
  </input-sockets>
  <slots/>
  <cables>
-  <cable type="jack-audio" output="output 0" input="simulator 0"/>
-  <cable type="jack-audio" output="output 0" input="lasershark 0"/>
-  <cable type="jack-audio" output="libol 0" input="output 0"/>
-  <cable type="jack-audio" output="output 1" input="simulator 1"/>
-  <cable type="jack-audio" output="output 1" input="lasershark 1"/>
-  <cable type="jack-audio" output="libol 1" input="output 1"/>
+  <cable input="simulator 0" type="jack-audio" output="output 0"/>
+  <cable input="lasershark 0" type="jack-audio" output="output 0"/>
+  <cable input="output 0" type="jack-audio" output="libol 0"/>
+  <cable input="simulator 1" type="jack-audio" output="output 1"/>
+  <cable input="lasershark 1" type="jack-audio" output="output 1"/>
+  <cable input="output 1" type="jack-audio" output="libol 1"/>
  </cables>
 </patchbay>
 
