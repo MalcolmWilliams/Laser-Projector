@@ -12,9 +12,16 @@ def format_list(message):
     message[idx] = message[idx][:len(message[idx])-1]
     for i in range(0,idx+1):
         message[i] = message[i].lstrip()
+    #edge case for when commas get left behind
+    if(len(message)>1):
+        for i in range(len(message)-1): #happens of first until second last lines
+            message[i] = rreplace(message[i])
+    
     return message
 
-
+def rreplace(s, old=',', new='', occurrence=1):
+    li = s.rsplit(old, occurrence)
+    return new.join(li)
 
 parser = argparse.ArgumentParser(description='This is a shitty work-around')
 parser.add_argument('--message', nargs='+')
@@ -31,7 +38,9 @@ time_display = results.time_display
 justification = results.justification
 
 od = Openlase_Driver.Openlase_Driver()
-od.write_tweet(results.message, results.time_display, justification=justification)
+#use the test_params when tuning the parameters to find the fastest acceptable setting
+od.test_params(results.message, results.time_display, justification=justification)
+#od.write_tweet(results.message, results.time_display, justification=justification)
 
 print message
 print time_display

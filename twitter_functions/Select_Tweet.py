@@ -108,9 +108,14 @@ class Select_Tweet:
         **Returns:**
             | JSON tweet object
         """
-        rand_int = random.randint(0, len(self.tweets)-1)
-        print "Random tweet selected: " + str(self.tweets[rand_int]['id'])
-        return self.tweets[rand_int]
+        try:
+            rand_int = random.randint(0, len(self.tweets)-1)
+            tweet = self.tweets[rand_int]
+            print "Random tweet selected: " + str(tweet['id'])
+        except (ValueError):
+            tweet = "No tweets in pool"
+            print tweet
+        return tweet
 
     def get_tweet_text(self, tweet):   
         """

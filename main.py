@@ -18,7 +18,6 @@ from openlase import Laser_Format
 import threading        #threadign for the tweet retrieval to run concurrently.
 import time
 import os
-from test import write
 
 class Laser_Writer:
     
@@ -33,7 +32,7 @@ class Laser_Writer:
         """
         
         #Properties of the search
-        mention_account = '@BarackObama'
+        mention_account = '@malcolm_test'#'@BarackObama'
         retrieval_count = 20
         black_list = "" #tweets containing these words will be filtered out, add them in this format "-shit -piss -fuck -cunt -cocksucker -motherfucker"
         filter_ = "filter:safe"
@@ -71,15 +70,21 @@ class Laser_Writer:
         
         print "Output: " + tweet
         tweet = self.lf.format(tweet)
-
+        #only uncomment next line if you are testing the performance.
+        tweet = [ ["1234567890 1234567890","1234567890 1234567890",], [] ]
     
         
         #This is a reaaaallllly shitty work-around. You cannot simply run two instances of the openlase driver class, it needs to be two seperate files. 
         #Every time you write to the driver, open a new instance, write to first, small delay, write to second, etc. Once the drivers are done running they will destroy themselves.
+        #hide the output
         cmd_start = "nohup python driver_instance.py --message "
         cmd_end = " > /dev/null 2>&1 &"
+        #display output
+        cmd_start = "python driver_instance.py --message "
+        cmd_end = " &"
         
-        for i in range(len(tweet)):     #one per laser.
+        #for i in range(len(tweet)):     #one per laser.
+        for i in range(1):     #for testing speed on a single laser.
 
             if(i == 0): justification = 'r'
             elif(i == len(tweet)-1): justification = 'l'
@@ -118,7 +123,7 @@ class Laser_Writer:
 
         The function will start by randomly showing tweets. Hit ``ctrl-c`` to switch to keyboard promt. Hit ``crtl-c`` again to exit
         """
-        
+        '''
         try:
             while(True):
                 print("====================================================")
@@ -137,11 +142,15 @@ class Laser_Writer:
         except KeyboardInterrupt:
             pass 
         '''
+        
+        #This is a quick testing function that will print up to 140 characters (max length of a tweet)
+        #can be used to evaluate performance of the lasers
+
         test_string = "1234567890 "
-        for i in range(14):
+        for i in range(13,14):
             temp = test_string*(i+1)
-            self.write_tweet(temp, 1)
-        '''
+            self.write_tweet(temp, 3)
+        
 
 if(__name__ == "__main__"):
     lw = Laser_Writer()
