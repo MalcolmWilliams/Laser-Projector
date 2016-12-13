@@ -32,7 +32,7 @@ class Laser_Writer:
         """
         
         #Properties of the search
-        mention_account = '@malcolm_test'#'@BarackObama'
+        mention_account = '@BarackObama'#'@malcolm_test'#
         retrieval_count = 20
         black_list = "" #tweets containing these words will be filtered out, add them in this format "-shit -piss -fuck -cunt -cocksucker -motherfucker"
         filter_ = "filter:safe"
@@ -71,7 +71,7 @@ class Laser_Writer:
         print "Output: " + tweet
         tweet = self.lf.format(tweet)
         #only uncomment next line if you are testing the performance.
-        tweet = [ ["1234567890 1234567890","1234567890 1234567890",], [] ]
+        #tweet = [ ["1234567890 1234567890","1234567890 1234567890",], [] ]
     
         
         #This is a reaaaallllly shitty work-around. You cannot simply run two instances of the openlase driver class, it needs to be two seperate files. 
@@ -80,11 +80,11 @@ class Laser_Writer:
         cmd_start = "nohup python driver_instance.py --message "
         cmd_end = " > /dev/null 2>&1 &"
         #display output
-        cmd_start = "python driver_instance.py --message "
-        cmd_end = " &"
+        #cmd_start = "python driver_instance.py --message "
+        #cmd_end = " &"
         
-        #for i in range(len(tweet)):     #one per laser.
-        for i in range(1):     #for testing speed on a single laser.
+        for i in range(len(tweet)):     #one per laser.
+            #for i in range(1):     #for testing speed on a single laser.
 
             if(i == 0): justification = 'r'
             elif(i == len(tweet)-1): justification = 'l'
@@ -147,9 +147,10 @@ class Laser_Writer:
         #can be used to evaluate performance of the lasers
 
         test_string = "1234567890 "
-        for i in range(13,14):
-            temp = test_string*(i+1)
-            self.write_tweet(temp, 3)
+        for i in range(14):
+            #temp = test_string*(i+1)
+            temp = test_string*(9)
+            self.write_tweet(temp, 10)
         
 
 if(__name__ == "__main__"):

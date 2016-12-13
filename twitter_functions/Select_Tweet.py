@@ -22,6 +22,7 @@ except ImportError:
     import simplejson as json
 import types
 import random
+import logging
 
 class Select_Tweet:
     """
@@ -47,6 +48,9 @@ class Select_Tweet:
             
         self.tweets = []
         self.refresh_tweets()
+
+        logging.basicConfig(filename="temp.log", level=logging.DEBUG)
+
 
     def print_file(self):
         """
@@ -109,9 +113,14 @@ class Select_Tweet:
             | JSON tweet object
         """
         try:
-            rand_int = random.randint(0, len(self.tweets)-1)
-            tweet = self.tweets[rand_int]
-            print "Random tweet selected: " + str(tweet['id'])
+            while(True):
+                rand_int = random.randint(0, len(self.tweets)-1)
+                tweet = self.tweets[rand_int]
+                logging.info(str(tweet['text']))
+                logging.info(len(str(tweet['text'])))
+                if(len(str(tweet['text'])) < 80):       #reject tweets if there are toomany charaacters.
+                    print "Random tweet selected: " + str(tweet['id'])
+                    break
         except (ValueError):
             tweet = "No tweets in pool"
             print tweet
