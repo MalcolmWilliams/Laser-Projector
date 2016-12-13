@@ -1,0 +1,1 @@
+/usr/bin/cc  -O3 -g   CMakeFiles/midiview.dir/midiview.c.o  -o midiview  -L/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol -rdynamic ../libol/libopenlase.so.0 -lasound -lpthread -lm -ljack -Wl,-rpath,/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol 

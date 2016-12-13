@@ -1,0 +1,1 @@
+/usr/bin/cc  -O3 -g   CMakeFiles/cal.dir/cal.c.o  -o cal  -L/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol -rdynamic -ljack -lm -Wl,-rpath,/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol 

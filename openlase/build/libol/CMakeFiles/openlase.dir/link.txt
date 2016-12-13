@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -O3 -g  -shared -Wl,-soname,libopenlase.so.0 -o libopenlase.so.0 CMakeFiles/openlase.dir/libol.c.o CMakeFiles/openlase.dir/text.c.o CMakeFiles/openlase.dir/ilda.c.o CMakeFiles/openlase.dir/trace.c.o CMakeFiles/openlase.dir/imgproc_sse2.asm.o CMakeFiles/openlase.dir/fontdef.c.o -lpthread -lm -ljack 
