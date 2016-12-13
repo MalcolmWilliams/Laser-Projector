@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/output.dir/output.cpp.o CMakeFiles/output.dir/output_settings.cpp.o CMakeFiles/output.dir/moc_output_settings.cxx.o  -o output -rdynamic -ljack -lQtGui -lQtCore 

@@ -184,6 +184,33 @@ Concurrently running modules are handled with pythons threading library</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-Laser_Format">
+<span id="laser-format"></span><h2>Laser_Format<a class="headerlink" href="#module-Laser_Format" title="Permalink to this headline">¶</a></h2>
+<p>Contains all the functions to format a raw text string into something that can be output by the laser writer.</p>
+<p><strong>Input:</strong> String
+<strong>Output:</strong> Double nested list of strings (one for each laser, one for each line).</p>
+<div class="section" id="formatting-that-will-be-done">
+<h3>Formatting that will be done:<a class="headerlink" href="#formatting-that-will-be-done" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>convert to 128bit ascii.</li>
+<li>remove hyperlinks, metions</li>
+<li>wordwrapping (split words if needed)</li>
+<li>split into one section per laser</li>
+</ol>
+<dl class="class">
+<dt id="Laser_Format.Laser_Format">
+<em class="property">class </em><code class="descclassname">Laser_Format.</code><code class="descname">Laser_Format</code><a class="reference internal" href="_modules/Laser_Format.html#Laser_Format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Laser_Format.Laser_Format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the formatting and segmentation</p>
+<dl class="method">
+<dt id="Laser_Format.Laser_Format.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Laser_Format.html#Laser_Format.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Laser_Format.Laser_Format.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a Laser_Format object</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
 <div class="section" id="module-Select_Tweet">
 <span id="select-tweet"></span><h2>Select_Tweet<a class="headerlink" href="#module-Select_Tweet" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
@@ -461,6 +488,10 @@ Concurrently running modules are handled with pythons threading library</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-Openlase_Driver">Openlase_Driver</a></li>
+<li><a class="reference internal" href="#module-Laser_Format">Laser_Format</a><ul>
+<li><a class="reference internal" href="#formatting-that-will-be-done">Formatting that will be done:</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-Select_Tweet">Select_Tweet</a></li>
 <li><a class="reference internal" href="#module-Retrieve_Tweets">Retrieve_Tweets</a></li>
 </ul>

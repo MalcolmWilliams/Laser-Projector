@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/playilda.c
+stdio.h
+-
+errno.h
+-
+unistd.h
+-
+string.h
+-
+stdlib.h
+-
+jack/jack.h
+-
+sys/types.h
+-
+sys/param.h
+-
+sys/stat.h
+-
+stdint.h
+-
+

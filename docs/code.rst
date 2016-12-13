@@ -13,6 +13,12 @@ Openlase_Driver
     :members: 
     :special-members:
 
+Laser_Format
+============
+.. automodule:: Laser_Format
+    :members:
+    :special-members:
+
 Select_Tweet
 ============
 .. automodule:: Select_Tweet

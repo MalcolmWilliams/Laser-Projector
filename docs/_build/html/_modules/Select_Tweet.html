@@ -153,9 +153,9 @@
 <span class="sd">        **Returns:**</span>
 <span class="sd">            | JSON tweet object</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">rand_int</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-        <span class="nb">print</span> <span class="s2">&quot;Random tweet selected: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweets</span><span class="p">[</span><span class="n">rand_int</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">tweets</span><span class="p">[</span><span class="n">rand_int</span><span class="p">]</span></div>
+        <span class="n">rand_int</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tweets</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="s2">&quot;Random tweet selected: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tweets</span><span class="p">[</span><span class="n">rand_int</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tweets</span><span class="p">[</span><span class="n">rand_int</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="Select_Tweet.get_tweet_text"><a class="viewcode-back" href="../code.html#Select_Tweet.Select_Tweet.get_tweet_text">[docs]</a>    <span class="k">def</span> <span class="nf">get_tweet_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tweet</span><span class="p">):</span>   
         <span class="sd">&quot;&quot;&quot;</span>

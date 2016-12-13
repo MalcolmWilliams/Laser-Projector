@@ -14,8 +14,10 @@ __docformat__ = 'restructuredtext'
 from twitter_functions import Select_Tweet
 from twitter_functions import Retrieve_Tweets
 from openlase import Openlase_Driver
+from openlase import Laser_Format
 import threading        #threadign for the tweet retrieval to run concurrently.
 import time
+import os
 
 class Laser_Writer:
     
@@ -30,7 +32,7 @@ class Laser_Writer:
         """
         
         #Properties of the search
-        mention_account = '@malcolm_test'
+        mention_account = '@BarackObama'#'@malcolm_test'#
         retrieval_count = 20
         black_list = "" #tweets containing these words will be filtered out, add them in this format "-shit -piss -fuck -cunt -cocksucker -motherfucker"
         filter_ = "filter:safe"
@@ -38,13 +40,18 @@ class Laser_Writer:
         tweets_filename='twitter_functions/output.txt'
 
        
-        self.od = Openlase_Driver.Openlase_Driver()#this is what you send the tweets to
+        self.num_lasers = 2
+        self.laser_speeds = [20000, 40000]      #note these also need to be properly configured in jack!
+
+        self.lf = Laser_Format.Laser_Format(self.laser_speeds)
 
         self.rt = Retrieve_Tweets.Retrieve_Tweets(black_list, tweets_filename=tweets_filename, mention_account=mention_account)
         
         #select tweet should be called after, in case the output.txt file does not exist. 
         self.st = Select_Tweet.Select_Tweet(tweets_filename=tweets_filename)
         #st.self_test()
+
+
 
     def write_tweet(self, tweet="This is the default tweet", time_display=10):
         """
@@ -60,15 +67,37 @@ class Laser_Writer:
         **Note:**
             Will print out the message to be displayed.
         """
-        tweet = tweet.encode('ascii', 'ignore') #openlase library can only take ascii data
-        print "Output: " + str(tweet)
-        #tweet = self.st.get_tweet_text(self.st.get_tweet_by_id(796082699215613952)) 
-        #tweet = self.st.self_test()
-        #write a tweet using the lasers!!!. this takes in a string of text.
-        t = threading.Thread(target = self.od.write_tweet(tweet, time_display))
-        #t = daemon = True
-        t.start()
-        #note: there needs to be a way to kill this and start it again nicely. 
+        
+        print "Output: " + tweet
+        tweet = self.lf.format(tweet)
+        #only uncomment next line if you are testing the performance.
+        #tweet = [ ["1234567890 1234567890","1234567890 1234567890",], [] ]
+    
+        
+        #This is a reaaaallllly shitty work-around. You cannot simply run two instances of the openlase driver class, it needs to be two seperate files. 
+        #Every time you write to the driver, open a new instance, write to first, small delay, write to second, etc. Once the drivers are done running they will destroy themselves.
+        #hide the output
+        cmd_start = "nohup python driver_instance.py --message "
+        cmd_end = " > /dev/null 2>&1 &"
+        #display output
+        #cmd_start = "python driver_instance.py --message "
+        #cmd_end = " &"
+        
+        for i in range(len(tweet)):     #one per laser.
+            #for i in range(1):     #for testing speed on a single laser.
+
+            if(i == 0): justification = 'r'
+            elif(i == len(tweet)-1): justification = 'l'
+            else: justification = 'c' #this should be changed to full justification and not centered. will never be used. 
+            
+            cmd = cmd_start + str(tweet[i]) + " --time_display  " + str(time_display) + " --justification " + justification + cmd_end
+            #print cmd
+            os.system(cmd)
+            time.sleep(0.05)#if they are run to close to each other they sometimes mess up
+            
+        time.sleep(time_display + 0.5)
+
+
 
     def start_tweet_retrieval(self):
         """
@@ -109,14 +138,20 @@ class Laser_Writer:
                 #get the users message:
                 print("====================================================")
                 message = raw_input("Enter the desired message: ") 
-                self.write_tweet(message, 0.1)
+                self.write_tweet(message, 5)
         except KeyboardInterrupt:
             pass 
         '''
+        
+        #This is a quick testing function that will print up to 140 characters (max length of a tweet)
+        #can be used to evaluate performance of the lasers
+
         test_string = "1234567890 "
         for i in range(14):
-            temp = test_string*(i+1)
-            self.write_tweet(temp, 1)
+            #temp = test_string*(i+1)
+            temp = test_string*(9)
+            self.write_tweet(temp, 10)
+        
 
 if(__name__ == "__main__"):
     lw = Laser_Writer()

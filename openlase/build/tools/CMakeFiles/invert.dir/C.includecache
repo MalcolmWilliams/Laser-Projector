@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/invert.c
+stdio.h
+-
+errno.h
+-
+unistd.h
+-
+string.h
+-
+stdlib.h
+-
+jack/jack.h
+-
+stdint.h
+-
+

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/libol.h
+stdint.h
+-
+
+/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/examples/pong.c
+libol.h
+/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/examples/libol.h
+stdio.h
+-
+errno.h
+-
+unistd.h
+-
+string.h
+-
+stdlib.h
+-
+jack/jack.h
+-
+math.h
+-
+linux/input.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+

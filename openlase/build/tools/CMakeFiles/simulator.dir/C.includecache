@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/simulator.c
+stdio.h
+-
+errno.h
+-
+unistd.h
+-
+string.h
+-
+stdlib.h
+-
+math.h
+-
+jack/jack.h
+-
+GL/glut.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+

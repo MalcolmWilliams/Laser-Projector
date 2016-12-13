@@ -1,0 +1,1 @@
+/usr/bin/cc  -O3 -g   CMakeFiles/simulator.dir/simulator.c.o  -o simulator  -L/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol -rdynamic -lm -lGLU -lGL -lglut -lXmu -lXi -ljack -Wl,-rpath,/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol 

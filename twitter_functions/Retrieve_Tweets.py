@@ -98,7 +98,7 @@ class Retrieve_Tweets:
                 output_file.flush()     #make sure the buffer is clear
                 id_ = tweet['id']
                 if(id_ > latest_id): latest_id = id_
-                print "Added tweet: " + str(id_)
+                #print "Added tweet: " + str(id_)
 
             #keep refreshing and looking for new tweets to add to file. 
             while(True):
@@ -113,17 +113,17 @@ class Retrieve_Tweets:
                         output_file.flush()     #make sure the buffer is clear. 
                         id_ = tweet['id']
                         if(id_ > latest_id): latest_id = id_
-                        print "Added tweet: " + str(id_)
+                        #print "Added tweet: " + str(id_)
 
 
 if(__name__ == "__main__"):
 
     #Properties of the search
-    mention_account = '@malcolm_test'
+    mention_account = '@BarackObama'
     retrieval_count = 20
     black_list = "" #tweets containing these words will be filtered out, add them in this format "-shit -piss -fuck -cunt -cocksucker -motherfucker"
     filter_ = "filter:safe"
     lang_= 'en'
 
-    rt = Retrieve_Tweets(black_list='')
+    rt = Retrieve_Tweets(mention_account=mention_account, black_list='')
     rt.get_tweets()

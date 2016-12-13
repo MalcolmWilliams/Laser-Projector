@@ -1,0 +1,1 @@
+/usr/bin/cc  -O3 -g   CMakeFiles/playilda.dir/playilda.c.o  -o playilda  -L/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol -rdynamic -ljack -Wl,-rpath,/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol 

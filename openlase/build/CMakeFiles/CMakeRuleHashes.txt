@@ -1,0 +1,6 @@
+# Hashes of file build rules.
+452e5ee9e7b52cfe59a997dca9a1fcce libol/fontdef.c
+3b823812b016dc10edf567896ce1e32f output/moc_output_settings.cxx
+c3c3d886c243ae50b5534203d2d18ad5 output/ui_output_settings.h
+2fa48ee6f53087cc0e02fb9ada55c688 python/pylase.c
+3b2b7c29d77a0716762084bce8402fae tools/qplayvid/moc_qplayvid_gui.cxx
