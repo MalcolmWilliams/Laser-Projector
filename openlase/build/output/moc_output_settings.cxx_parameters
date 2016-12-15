@@ -5,5 +5,5 @@
 -DQT_GUI_LIB
 -DQT_CORE_LIB
 -o
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/moc_output_settings.cxx
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/moc_output_settings.cxx
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.h

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase
+CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build
+CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build
 
 # Include any dependencies generated for this target.
 include output/CMakeFiles/output.dir/depend.make
@@ -58,26 +58,26 @@ include output/CMakeFiles/output.dir/progress.make
 include output/CMakeFiles/output.dir/flags.make
 
 output/ui_output_settings.h: ../output/output_settings.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ui_output_settings.h"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/lib/x86_64-linux-gnu/qt4/bin/uic -o /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/ui_output_settings.h /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ui_output_settings.h"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/lib/x86_64-linux-gnu/qt4/bin/uic -o /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/ui_output_settings.h /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.ui
 
 output/moc_output_settings.cxx: ../output/output_settings.h
 output/moc_output_settings.cxx: output/moc_output_settings.cxx_parameters
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating moc_output_settings.cxx"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/moc_output_settings.cxx_parameters
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating moc_output_settings.cxx"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/moc_output_settings.cxx_parameters
 
 output/CMakeFiles/output.dir/output.cpp.o: output/CMakeFiles/output.dir/flags.make
 output/CMakeFiles/output.dir/output.cpp.o: ../output/output.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object output/CMakeFiles/output.dir/output.cpp.o"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/output.cpp.o -c /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object output/CMakeFiles/output.dir/output.cpp.o"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/output.cpp.o -c /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output.cpp
 
 output/CMakeFiles/output.dir/output.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/output.cpp.i"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output.cpp > CMakeFiles/output.dir/output.cpp.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output.cpp > CMakeFiles/output.dir/output.cpp.i
 
 output/CMakeFiles/output.dir/output.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/output.cpp.s"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output.cpp -o CMakeFiles/output.dir/output.cpp.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output.cpp -o CMakeFiles/output.dir/output.cpp.s
 
 output/CMakeFiles/output.dir/output.cpp.o.requires:
 
@@ -92,16 +92,16 @@ output/CMakeFiles/output.dir/output.cpp.o.provides.build: output/CMakeFiles/outp
 
 output/CMakeFiles/output.dir/output_settings.cpp.o: output/CMakeFiles/output.dir/flags.make
 output/CMakeFiles/output.dir/output_settings.cpp.o: ../output/output_settings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object output/CMakeFiles/output.dir/output_settings.cpp.o"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/output_settings.cpp.o -c /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object output/CMakeFiles/output.dir/output_settings.cpp.o"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/output_settings.cpp.o -c /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.cpp
 
 output/CMakeFiles/output.dir/output_settings.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/output_settings.cpp.i"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.cpp > CMakeFiles/output.dir/output_settings.cpp.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.cpp > CMakeFiles/output.dir/output_settings.cpp.i
 
 output/CMakeFiles/output.dir/output_settings.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/output_settings.cpp.s"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.cpp -o CMakeFiles/output.dir/output_settings.cpp.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.cpp -o CMakeFiles/output.dir/output_settings.cpp.s
 
 output/CMakeFiles/output.dir/output_settings.cpp.o.requires:
 
@@ -116,16 +116,16 @@ output/CMakeFiles/output.dir/output_settings.cpp.o.provides.build: output/CMakeF
 
 output/CMakeFiles/output.dir/moc_output_settings.cxx.o: output/CMakeFiles/output.dir/flags.make
 output/CMakeFiles/output.dir/moc_output_settings.cxx.o: output/moc_output_settings.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object output/CMakeFiles/output.dir/moc_output_settings.cxx.o"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/moc_output_settings.cxx.o -c /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/moc_output_settings.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object output/CMakeFiles/output.dir/moc_output_settings.cxx.o"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/output.dir/moc_output_settings.cxx.o -c /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/moc_output_settings.cxx
 
 output/CMakeFiles/output.dir/moc_output_settings.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/output.dir/moc_output_settings.cxx.i"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/moc_output_settings.cxx > CMakeFiles/output.dir/moc_output_settings.cxx.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/moc_output_settings.cxx > CMakeFiles/output.dir/moc_output_settings.cxx.i
 
 output/CMakeFiles/output.dir/moc_output_settings.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/output.dir/moc_output_settings.cxx.s"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/moc_output_settings.cxx -o CMakeFiles/output.dir/moc_output_settings.cxx.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/moc_output_settings.cxx -o CMakeFiles/output.dir/moc_output_settings.cxx.s
 
 output/CMakeFiles/output.dir/moc_output_settings.cxx.o.requires:
 
@@ -155,8 +155,8 @@ output/output: /usr/lib/x86_64-linux-gnu/libjack.so
 output/output: /usr/lib/x86_64-linux-gnu/libQtGui.so
 output/output: /usr/lib/x86_64-linux-gnu/libQtCore.so
 output/output: output/CMakeFiles/output.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable output"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/output.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable output"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/output.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 output/CMakeFiles/output.dir/build: output/output
@@ -170,11 +170,11 @@ output/CMakeFiles/output.dir/requires: output/CMakeFiles/output.dir/moc_output_s
 .PHONY : output/CMakeFiles/output.dir/requires
 
 output/CMakeFiles/output.dir/clean:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output && $(CMAKE_COMMAND) -P CMakeFiles/output.dir/cmake_clean.cmake
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output && $(CMAKE_COMMAND) -P CMakeFiles/output.dir/cmake_clean.cmake
 .PHONY : output/CMakeFiles/output.dir/clean
 
 output/CMakeFiles/output.dir/depend: output/ui_output_settings.h
 output/CMakeFiles/output.dir/depend: output/moc_output_settings.cxx
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/malcolm/Coding/Khazanah/Laser-Projector/openlase /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/CMakeFiles/output.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/malcolm/Coding/Khazanah/Laser-Writer/openlase /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/CMakeFiles/output.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : output/CMakeFiles/output.dir/depend
 

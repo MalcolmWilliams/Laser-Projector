@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid.c" "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.o"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid.c" "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -25,8 +25,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "tools/qplayvid"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx" "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o"
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid_gui.cpp" "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx" "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid_gui.cpp" "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -48,7 +48,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol/CMakeFiles/openlase.dir/DependInfo.cmake"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol/CMakeFiles/openlase.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

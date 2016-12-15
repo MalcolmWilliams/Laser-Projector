@@ -1,4 +1,4 @@
-# Install script for directory: /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid
+# Install script for directory: /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

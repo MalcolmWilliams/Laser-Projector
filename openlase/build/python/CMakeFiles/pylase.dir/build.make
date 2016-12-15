@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase
+CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build
+CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build
 
 # Include any dependencies generated for this target.
 include python/CMakeFiles/pylase.dir/depend.make
@@ -58,21 +58,21 @@ include python/CMakeFiles/pylase.dir/progress.make
 include python/CMakeFiles/pylase.dir/flags.make
 
 python/pylase.c: ../python/pylase.pyx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating pylase.c"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python && /usr/bin/cython -I /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/include -I /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python -o pylase.c /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/python/pylase.pyx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating pylase.c"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python && /usr/bin/cython -I /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/include -I /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python -o pylase.c /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/python/pylase.pyx
 
 python/CMakeFiles/pylase.dir/pylase.c.o: python/CMakeFiles/pylase.dir/flags.make
 python/CMakeFiles/pylase.dir/pylase.c.o: python/pylase.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object python/CMakeFiles/pylase.dir/pylase.c.o"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pylase.dir/pylase.c.o   -c /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python/pylase.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object python/CMakeFiles/pylase.dir/pylase.c.o"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pylase.dir/pylase.c.o   -c /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python/pylase.c
 
 python/CMakeFiles/pylase.dir/pylase.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pylase.dir/pylase.c.i"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python/pylase.c > CMakeFiles/pylase.dir/pylase.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python/pylase.c > CMakeFiles/pylase.dir/pylase.c.i
 
 python/CMakeFiles/pylase.dir/pylase.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pylase.dir/pylase.c.s"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python/pylase.c -o CMakeFiles/pylase.dir/pylase.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python/pylase.c -o CMakeFiles/pylase.dir/pylase.c.s
 
 python/CMakeFiles/pylase.dir/pylase.c.o.requires:
 
@@ -96,8 +96,8 @@ python/pylase.so: python/CMakeFiles/pylase.dir/pylase.c.o
 python/pylase.so: python/CMakeFiles/pylase.dir/build.make
 python/pylase.so: libol/libopenlase.so.0
 python/pylase.so: python/CMakeFiles/pylase.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared module pylase.so"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pylase.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared module pylase.so"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pylase.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 python/CMakeFiles/pylase.dir/build: python/pylase.so
@@ -109,10 +109,10 @@ python/CMakeFiles/pylase.dir/requires: python/CMakeFiles/pylase.dir/pylase.c.o.r
 .PHONY : python/CMakeFiles/pylase.dir/requires
 
 python/CMakeFiles/pylase.dir/clean:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python && $(CMAKE_COMMAND) -P CMakeFiles/pylase.dir/cmake_clean.cmake
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python && $(CMAKE_COMMAND) -P CMakeFiles/pylase.dir/cmake_clean.cmake
 .PHONY : python/CMakeFiles/pylase.dir/clean
 
 python/CMakeFiles/pylase.dir/depend: python/pylase.c
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/malcolm/Coding/Khazanah/Laser-Projector/openlase /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/python /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python/CMakeFiles/pylase.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/malcolm/Coding/Khazanah/Laser-Writer/openlase /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/python /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python/CMakeFiles/pylase.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : python/CMakeFiles/pylase.dir/depend
 

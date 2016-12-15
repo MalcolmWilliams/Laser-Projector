@@ -6,5 +6,5 @@ C_FLAGS = -O3 -g -fPIC   -Wall
 
 C_DEFINES = -Dpylase_EXPORTS
 
-C_INCLUDES = -I/usr/include/python2.7 -I/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/include 
+C_INCLUDES = -I/usr/include/python2.7 -I/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/include 
 

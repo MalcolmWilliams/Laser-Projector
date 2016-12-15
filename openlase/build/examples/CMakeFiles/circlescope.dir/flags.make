@@ -6,5 +6,5 @@ C_FLAGS = -O3 -g   -Wall
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/include 
+C_INCLUDES = -I/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/include 
 

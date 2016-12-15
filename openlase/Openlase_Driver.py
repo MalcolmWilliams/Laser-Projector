@@ -40,6 +40,7 @@ __docformat__ = 'restructuredtext'
 
 import sys
 sys.path.append('./openlase/build/python')
+sys.path.append('./openlase/build/libol')
 import pylase as ol
 from math import pi
 import time as t

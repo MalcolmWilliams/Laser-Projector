@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/simulator.c
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/simulator.c
 stdio.h
 -
 errno.h

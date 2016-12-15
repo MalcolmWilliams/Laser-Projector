@@ -12,11 +12,11 @@ stdint.h
 
 ../include/trace.h
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid.c
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid.c
 libol.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/libol.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/libol.h
 trace.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/trace.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/trace.h
 stdio.h
 -
 errno.h
@@ -34,7 +34,7 @@ math.h
 pthread.h
 -
 qplayvid.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid.h
 libavcodec/avcodec.h
 -
 libavformat/avformat.h
@@ -48,5 +48,5 @@ libavutil/opt.h
 libswscale/swscale.h
 -
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid.h
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase
+CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build
+CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/CMakeFiles/progress.marks
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 output/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles 0
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/CMakeFiles/progress.marks
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 output/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 output/clean
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 output/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 output/preinstall
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 output/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 output/preinstall
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 output/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 output/CMakeFiles/output.dir/rule:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 output/CMakeFiles/output.dir/rule
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 output/CMakeFiles/output.dir/rule
 .PHONY : output/CMakeFiles/output.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ output: output/CMakeFiles/output.dir/rule
 
 # fast build rule for target.
 output/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/build
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/build
 .PHONY : output/fast
 
 moc_output_settings.o: moc_output_settings.cxx.o
@@ -131,7 +131,7 @@ moc_output_settings.o: moc_output_settings.cxx.o
 
 # target to build an object file
 moc_output_settings.cxx.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/moc_output_settings.cxx.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/moc_output_settings.cxx.o
 .PHONY : moc_output_settings.cxx.o
 
 moc_output_settings.i: moc_output_settings.cxx.i
@@ -140,7 +140,7 @@ moc_output_settings.i: moc_output_settings.cxx.i
 
 # target to preprocess a source file
 moc_output_settings.cxx.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/moc_output_settings.cxx.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/moc_output_settings.cxx.i
 .PHONY : moc_output_settings.cxx.i
 
 moc_output_settings.s: moc_output_settings.cxx.s
@@ -149,7 +149,7 @@ moc_output_settings.s: moc_output_settings.cxx.s
 
 # target to generate assembly for a file
 moc_output_settings.cxx.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/moc_output_settings.cxx.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/moc_output_settings.cxx.s
 .PHONY : moc_output_settings.cxx.s
 
 output.o: output.cpp.o
@@ -158,7 +158,7 @@ output.o: output.cpp.o
 
 # target to build an object file
 output.cpp.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output.cpp.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output.cpp.o
 .PHONY : output.cpp.o
 
 output.i: output.cpp.i
@@ -167,7 +167,7 @@ output.i: output.cpp.i
 
 # target to preprocess a source file
 output.cpp.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output.cpp.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output.cpp.i
 .PHONY : output.cpp.i
 
 output.s: output.cpp.s
@@ -176,7 +176,7 @@ output.s: output.cpp.s
 
 # target to generate assembly for a file
 output.cpp.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output.cpp.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output.cpp.s
 .PHONY : output.cpp.s
 
 output_settings.o: output_settings.cpp.o
@@ -185,7 +185,7 @@ output_settings.o: output_settings.cpp.o
 
 # target to build an object file
 output_settings.cpp.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output_settings.cpp.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output_settings.cpp.o
 .PHONY : output_settings.cpp.o
 
 output_settings.i: output_settings.cpp.i
@@ -194,7 +194,7 @@ output_settings.i: output_settings.cpp.i
 
 # target to preprocess a source file
 output_settings.cpp.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output_settings.cpp.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output_settings.cpp.i
 .PHONY : output_settings.cpp.i
 
 output_settings.s: output_settings.cpp.s
@@ -203,7 +203,7 @@ output_settings.s: output_settings.cpp.s
 
 # target to generate assembly for a file
 output_settings.cpp.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output_settings.cpp.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f output/CMakeFiles/output.dir/build.make output/CMakeFiles/output.dir/output_settings.cpp.s
 .PHONY : output_settings.cpp.s
 
 # Help Target
@@ -235,6 +235,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

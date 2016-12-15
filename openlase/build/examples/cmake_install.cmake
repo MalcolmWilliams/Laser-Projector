@@ -1,4 +1,4 @@
-# Install script for directory: /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/examples
+# Install script for directory: /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/examples/scope.c" "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/examples/CMakeFiles/scope.dir/scope.c.o"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/examples/scope.c" "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/examples/CMakeFiles/scope.dir/scope.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

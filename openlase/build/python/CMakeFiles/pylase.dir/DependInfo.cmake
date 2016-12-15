@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python/pylase.c" "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python/CMakeFiles/pylase.dir/pylase.c.o"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python/pylase.c" "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python/CMakeFiles/pylase.dir/pylase.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol/CMakeFiles/openlase.dir/DependInfo.cmake"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol/CMakeFiles/openlase.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
