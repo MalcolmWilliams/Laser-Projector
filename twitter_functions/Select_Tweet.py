@@ -118,7 +118,7 @@ class Select_Tweet:
                 tweet = self.tweets[rand_int]
                 logging.info(str(tweet['text']))
                 logging.info(len(str(tweet['text'])))
-                if(len(str(tweet['text'])) < 80):       #reject tweets if there are toomany charaacters.
+                if(len(str(tweet['text'])) < 140):       #reject tweets if there are toomany charaacters.
                     print "Random tweet selected: " + str(tweet['id'])
                     break
         except (ValueError):

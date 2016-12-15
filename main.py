@@ -32,10 +32,11 @@ class Laser_Writer:
         """
         
         #Properties of the search
-        mention_account = '@BarackObama'#'@malcolm_test'#
+        mention_account = 'None'#'@malcolm_test'#
+        from_account = 'CNN'
         retrieval_count = 20
         black_list = "" #tweets containing these words will be filtered out, add them in this format "-shit -piss -fuck -cunt -cocksucker -motherfucker"
-        filter_ = "filter:safe"
+        filter_ = ""#"filter:safe"
         lang_= 'en'
         tweets_filename='twitter_functions/output.txt'
 
@@ -45,7 +46,7 @@ class Laser_Writer:
 
         self.lf = Laser_Format.Laser_Format(self.laser_speeds)
 
-        self.rt = Retrieve_Tweets.Retrieve_Tweets(black_list, tweets_filename=tweets_filename, mention_account=mention_account)
+        self.rt = Retrieve_Tweets.Retrieve_Tweets(black_list, tweets_filename=tweets_filename, mention_account=mention_account, from_account=from_account)
         
         #select tweet should be called after, in case the output.txt file does not exist. 
         self.st = Select_Tweet.Select_Tweet(tweets_filename=tweets_filename)
@@ -124,7 +125,7 @@ class Laser_Writer:
 
         The function will start by randomly showing tweets. Hit ``ctrl-c`` to switch to keyboard promt. Hit ``crtl-c`` again to exit
         """
-        '''
+        
         try:
             while(True):
                 print("====================================================")
@@ -152,7 +153,7 @@ class Laser_Writer:
             temp = test_string*(i+1)
             #temp = test_string*(9)
             self.write_tweet(temp, 2)
-        
+        '''    
 
 if(__name__ == "__main__"):
     lw = Laser_Writer()

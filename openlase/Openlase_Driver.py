@@ -194,8 +194,8 @@ class Openlase_Driver:
                 line_height = 0.9
                 height_change = -0.2
             elif(justification == 'b'):
-                line_height = -0.7
-                height_change = 0.2
+                line_height = -0.9+0.2*len(tweet_segments)
+                height_change = -0.2
 
 
             #Maybe can be moved to init?

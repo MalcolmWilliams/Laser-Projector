@@ -26,13 +26,14 @@ class Retrieve_Tweets:
     """
 
 
-    def __init__(self, black_list, mention_account='@malcolm_test', retrieval_count='20', filter_='filter:safe', lang='en', tweets_filename='output.txt'):
+    def __init__(self, black_list, mention_account='None', from_account='malcolm_test',  retrieval_count='20', filter_='filter:safe', lang='en', tweets_filename='output.txt'):
         """
         Initializes an instance of the retrieve tweets module
 
         **Args:**
             | *black_list:* string containg inappropriate words that should be filtered out, add them in this format ```-shit -piss -fuck -cunt -cocksucker -motherfucker```
             | *mention_account:* The account that the tweets are directed to
+            | *from_account:* The account that the tweet came from
             | *retrieval_count:* Maximum number of tweets that will be retrieved in a single refresh
             | *filter_:* Twitters own filtering intelligence to make sure tweets are safe
             | *lang:* Language of the tweet
@@ -59,9 +60,14 @@ class Retrieve_Tweets:
         self.tweets_filename = tweets_filename
         f = open(self.tweets_filename, 'w')     #create the file in case is does not exist. this is to be a little more robust with select_tweet.py
         f.close()
-    
-        #query = mention_account + ' ' + black_list
-        self.query = mention_account + ' ' + black_list + ' ' + filter_
+        
+
+        if(mention_account == 'None'):
+            from_account="from:"+from_account
+            self.query = from_account + ' ' + black_list + ' ' + filter_
+        else:
+            #query = mention_account + ' ' + black_list
+            self.query = mention_account + ' ' + black_list + ' ' + filter_
 
         oauth = OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
 
