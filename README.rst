@@ -41,6 +41,9 @@ Usage
 2. Enter the venv enviroment: ``source venv/bin/activate``
 3. Run the main.py file ``python main.py``
 4. You might need to click the patchbay button in JACK and activate all the connections (see the jack tutorial for setting up the connections)
+5. Multiple windows will be open. The output controls must be configured similar to the below image to blend the two lasers together.
+
+.. image:: Laser_output_configuration.png
 
 
 Documentation:
