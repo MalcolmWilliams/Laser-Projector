@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase
+CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build
+CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build
 
 # Include any dependencies generated for this target.
 include tools/qplayvid/CMakeFiles/qplayvid.dir/depend.make
@@ -59,21 +59,21 @@ include tools/qplayvid/CMakeFiles/qplayvid.dir/flags.make
 
 tools/qplayvid/moc_qplayvid_gui.cxx: ../tools/qplayvid/qplayvid_gui.h
 tools/qplayvid/moc_qplayvid_gui.cxx: tools/qplayvid/moc_qplayvid_gui.cxx_parameters
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating moc_qplayvid_gui.cxx"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && /usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx_parameters
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating moc_qplayvid_gui.cxx"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && /usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx_parameters
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.o: tools/qplayvid/CMakeFiles/qplayvid.dir/flags.make
 tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.o: ../tools/qplayvid/qplayvid.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.o"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/qplayvid.dir/qplayvid.c.o   -c /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.o"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/qplayvid.dir/qplayvid.c.o   -c /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid.c
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/qplayvid.dir/qplayvid.c.i"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid.c > CMakeFiles/qplayvid.dir/qplayvid.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid.c > CMakeFiles/qplayvid.dir/qplayvid.c.i
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/qplayvid.dir/qplayvid.c.s"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid.c -o CMakeFiles/qplayvid.dir/qplayvid.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid.c -o CMakeFiles/qplayvid.dir/qplayvid.c.s
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.o.requires:
 
@@ -88,16 +88,16 @@ tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.o.provides.build: tools/qplayv
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o: tools/qplayvid/CMakeFiles/qplayvid.dir/flags.make
 tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o: ../tools/qplayvid/qplayvid_gui.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o -c /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid_gui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o -c /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid_gui.cpp
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.i"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid_gui.cpp > CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid_gui.cpp > CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.i
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.s"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid_gui.cpp -o CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid_gui.cpp -o CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.s
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o.requires:
 
@@ -112,16 +112,16 @@ tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o.provides.build: tools/
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o: tools/qplayvid/CMakeFiles/qplayvid.dir/flags.make
 tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o: tools/qplayvid/moc_qplayvid_gui.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o -c /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o -c /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.i"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx > CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx > CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.i
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.s"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx -o CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx -o CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.s
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o.requires:
 
@@ -156,8 +156,8 @@ tools/qplayvid/qplayvid: /usr/lib/x86_64-linux-gnu/libswscale.so
 tools/qplayvid/qplayvid: /usr/lib/x86_64-linux-gnu/libQtGui.so
 tools/qplayvid/qplayvid: /usr/lib/x86_64-linux-gnu/libQtCore.so
 tools/qplayvid/qplayvid: tools/qplayvid/CMakeFiles/qplayvid.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable qplayvid"
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/qplayvid.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable qplayvid"
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/qplayvid.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tools/qplayvid/CMakeFiles/qplayvid.dir/build: tools/qplayvid/qplayvid
@@ -171,10 +171,10 @@ tools/qplayvid/CMakeFiles/qplayvid.dir/requires: tools/qplayvid/CMakeFiles/qplay
 .PHONY : tools/qplayvid/CMakeFiles/qplayvid.dir/requires
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/clean:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid && $(CMAKE_COMMAND) -P CMakeFiles/qplayvid.dir/cmake_clean.cmake
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid && $(CMAKE_COMMAND) -P CMakeFiles/qplayvid.dir/cmake_clean.cmake
 .PHONY : tools/qplayvid/CMakeFiles/qplayvid.dir/clean
 
 tools/qplayvid/CMakeFiles/qplayvid.dir/depend: tools/qplayvid/moc_qplayvid_gui.cxx
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/malcolm/Coding/Khazanah/Laser-Projector/openlase /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/CMakeFiles/qplayvid.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/malcolm/Coding/Khazanah/Laser-Writer/openlase /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/CMakeFiles/qplayvid.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/qplayvid/CMakeFiles/qplayvid.dir/depend
 

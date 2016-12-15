@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/moc_output_settings.cxx
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/moc_output_settings.cxx
 ../../output/output_settings.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.h
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output.cpp
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output.cpp
 stdio.h
 -
 errno.h
@@ -26,27 +26,27 @@ math.h
 jack/jack.h
 -
 output.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output.h
 QApplication
 -
 output_settings.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.h
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output.h
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.cpp
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.cpp
 QMessageBox
 -
 QGraphicsLineItem
 -
 output_settings.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.h
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.h
 ui_output_settings.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/ui_output_settings.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/ui_output_settings.h
 output.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output.h
 QGraphicsScene
 -
 QGraphicsEllipseItem

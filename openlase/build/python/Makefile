@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase
+CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build
+CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python/CMakeFiles/progress.marks
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 python/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles 0
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python/CMakeFiles/progress.marks
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 python/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 python/clean
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 python/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 python/preinstall
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 python/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 python/preinstall
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 python/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 python/CMakeFiles/pylase.dir/rule:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 python/CMakeFiles/pylase.dir/rule
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 python/CMakeFiles/pylase.dir/rule
 .PHONY : python/CMakeFiles/pylase.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ pylase: python/CMakeFiles/pylase.dir/rule
 
 # fast build rule for target.
 pylase/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f python/CMakeFiles/pylase.dir/build.make python/CMakeFiles/pylase.dir/build
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f python/CMakeFiles/pylase.dir/build.make python/CMakeFiles/pylase.dir/build
 .PHONY : pylase/fast
 
 pylase.o: pylase.c.o
@@ -131,7 +131,7 @@ pylase.o: pylase.c.o
 
 # target to build an object file
 pylase.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f python/CMakeFiles/pylase.dir/build.make python/CMakeFiles/pylase.dir/pylase.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f python/CMakeFiles/pylase.dir/build.make python/CMakeFiles/pylase.dir/pylase.c.o
 .PHONY : pylase.c.o
 
 pylase.i: pylase.c.i
@@ -140,7 +140,7 @@ pylase.i: pylase.c.i
 
 # target to preprocess a source file
 pylase.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f python/CMakeFiles/pylase.dir/build.make python/CMakeFiles/pylase.dir/pylase.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f python/CMakeFiles/pylase.dir/build.make python/CMakeFiles/pylase.dir/pylase.c.i
 .PHONY : pylase.c.i
 
 pylase.s: pylase.c.s
@@ -149,7 +149,7 @@ pylase.s: pylase.c.s
 
 # target to generate assembly for a file
 pylase.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f python/CMakeFiles/pylase.dir/build.make python/CMakeFiles/pylase.dir/pylase.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f python/CMakeFiles/pylase.dir/build.make python/CMakeFiles/pylase.dir/pylase.c.s
 .PHONY : pylase.c.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

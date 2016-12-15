@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase
+CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build
+CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/CMakeFiles/progress.marks
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/qplayvid/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles 0
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/CMakeFiles/progress.marks
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/qplayvid/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/qplayvid/clean
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/qplayvid/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/qplayvid/preinstall
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/qplayvid/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/qplayvid/preinstall
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/qplayvid/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tools/qplayvid/CMakeFiles/qplayvid.dir/rule:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/qplayvid/CMakeFiles/qplayvid.dir/rule
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/qplayvid/CMakeFiles/qplayvid.dir/rule
 .PHONY : tools/qplayvid/CMakeFiles/qplayvid.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ qplayvid: tools/qplayvid/CMakeFiles/qplayvid.dir/rule
 
 # fast build rule for target.
 qplayvid/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/build
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/build
 .PHONY : qplayvid/fast
 
 moc_qplayvid_gui.o: moc_qplayvid_gui.cxx.o
@@ -131,7 +131,7 @@ moc_qplayvid_gui.o: moc_qplayvid_gui.cxx.o
 
 # target to build an object file
 moc_qplayvid_gui.cxx.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.o
 .PHONY : moc_qplayvid_gui.cxx.o
 
 moc_qplayvid_gui.i: moc_qplayvid_gui.cxx.i
@@ -140,7 +140,7 @@ moc_qplayvid_gui.i: moc_qplayvid_gui.cxx.i
 
 # target to preprocess a source file
 moc_qplayvid_gui.cxx.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.i
 .PHONY : moc_qplayvid_gui.cxx.i
 
 moc_qplayvid_gui.s: moc_qplayvid_gui.cxx.s
@@ -149,7 +149,7 @@ moc_qplayvid_gui.s: moc_qplayvid_gui.cxx.s
 
 # target to generate assembly for a file
 moc_qplayvid_gui.cxx.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/moc_qplayvid_gui.cxx.s
 .PHONY : moc_qplayvid_gui.cxx.s
 
 qplayvid.o: qplayvid.c.o
@@ -158,7 +158,7 @@ qplayvid.o: qplayvid.c.o
 
 # target to build an object file
 qplayvid.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.o
 .PHONY : qplayvid.c.o
 
 qplayvid.i: qplayvid.c.i
@@ -167,7 +167,7 @@ qplayvid.i: qplayvid.c.i
 
 # target to preprocess a source file
 qplayvid.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.i
 .PHONY : qplayvid.c.i
 
 qplayvid.s: qplayvid.c.s
@@ -176,7 +176,7 @@ qplayvid.s: qplayvid.c.s
 
 # target to generate assembly for a file
 qplayvid.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid.c.s
 .PHONY : qplayvid.c.s
 
 qplayvid_gui.o: qplayvid_gui.cpp.o
@@ -185,7 +185,7 @@ qplayvid_gui.o: qplayvid_gui.cpp.o
 
 # target to build an object file
 qplayvid_gui.cpp.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.o
 .PHONY : qplayvid_gui.cpp.o
 
 qplayvid_gui.i: qplayvid_gui.cpp.i
@@ -194,7 +194,7 @@ qplayvid_gui.i: qplayvid_gui.cpp.i
 
 # target to preprocess a source file
 qplayvid_gui.cpp.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.i
 .PHONY : qplayvid_gui.cpp.i
 
 qplayvid_gui.s: qplayvid_gui.cpp.s
@@ -203,7 +203,7 @@ qplayvid_gui.s: qplayvid_gui.cpp.s
 
 # target to generate assembly for a file
 qplayvid_gui.cpp.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/qplayvid/CMakeFiles/qplayvid.dir/build.make tools/qplayvid/CMakeFiles/qplayvid.dir/qplayvid_gui.cpp.s
 .PHONY : qplayvid_gui.cpp.s
 
 # Help Target
@@ -235,6 +235,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

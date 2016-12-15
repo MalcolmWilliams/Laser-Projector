@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/moc_output_settings.cxx" "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/CMakeFiles/output.dir/moc_output_settings.cxx.o"
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output.cpp" "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/CMakeFiles/output.dir/output.cpp.o"
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/output/output_settings.cpp" "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/CMakeFiles/output.dir/output_settings.cpp.o"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/moc_output_settings.cxx" "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/CMakeFiles/output.dir/moc_output_settings.cxx.o"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output.cpp" "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/CMakeFiles/output.dir/output.cpp.o"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/output/output_settings.cpp" "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/CMakeFiles/output.dir/output_settings.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

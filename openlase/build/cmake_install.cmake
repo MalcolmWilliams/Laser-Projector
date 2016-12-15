@@ -1,4 +1,4 @@
-# Install script for directory: /home/malcolm/Coding/Khazanah/Laser-Projector/openlase
+# Install script for directory: /home/malcolm/Coding/Khazanah/Laser-Writer/openlase
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,11 +34,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol/cmake_install.cmake")
-  include("/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/output/cmake_install.cmake")
-  include("/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/cmake_install.cmake")
-  include("/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/python/cmake_install.cmake")
-  include("/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/examples/cmake_install.cmake")
+  include("/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol/cmake_install.cmake")
+  include("/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/output/cmake_install.cmake")
+  include("/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/cmake_install.cmake")
+  include("/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/python/cmake_install.cmake")
+  include("/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/examples/cmake_install.cmake")
 
 endif()
 
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

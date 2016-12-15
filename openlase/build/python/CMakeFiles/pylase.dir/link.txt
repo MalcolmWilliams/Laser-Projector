@@ -1,1 +1,1 @@
-/usr/bin/cc  -fPIC -O3 -g  -shared  -o pylase.so CMakeFiles/pylase.dir/pylase.c.o ../libol/libopenlase.so.0 -lpthread -lm -ljack -Wl,-rpath,/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol 
+/usr/bin/cc  -fPIC -O3 -g  -shared  -o pylase.so CMakeFiles/pylase.dir/pylase.c.o ../libol/libopenlase.so.0 -lpthread -lm -ljack -Wl,-rpath,/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol 

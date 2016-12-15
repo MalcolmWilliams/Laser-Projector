@@ -3,21 +3,21 @@
 
 libol/CMakeFiles/openlase.dir/fontdef.c.o
  ../include/text.h
- /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol/fontdef.c
+ /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol/fontdef.c
 libol/CMakeFiles/openlase.dir/ilda.c.o
  ../include/ilda.h
  ../include/libol.h
- /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/libol/ilda.c
+ /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/libol/ilda.c
 libol/CMakeFiles/openlase.dir/libol.c.o
  ../include/libol.h
- /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/libol/libol.c
+ /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/libol/libol.c
 libol/CMakeFiles/openlase.dir/text.c.o
  ../include/libol.h
  ../include/text.h
- /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/libol/text.c
+ /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/libol/text.c
 libol/CMakeFiles/openlase.dir/trace.c.o
  ../include/libol.h
  ../include/trace.h
- /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/libol/align.h
- /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/libol/trace.c
+ /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/libol/align.h
+ /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/libol/trace.c
  libol/config.h

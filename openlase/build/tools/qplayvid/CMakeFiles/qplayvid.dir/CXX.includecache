@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/moc_qplayvid_gui.cxx
 ../../../tools/qplayvid/qplayvid_gui.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid_gui.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid_gui.h
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid.h
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid_gui.cpp
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid_gui.cpp
 QApplication
 -
 QMessageBox
@@ -38,11 +38,11 @@ QFile
 QTextStream
 -
 qplayvid_gui.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid_gui.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid_gui.h
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid_gui.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid_gui.h
 qplayvid.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/qplayvid/qplayvid.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/qplayvid/qplayvid.h
 QMainWindow
 -
 QPushButton

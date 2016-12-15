@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase
+CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build
+CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/CMakeFiles/progress.marks
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles 0
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/CMakeFiles/progress.marks
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/clean
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tools/CMakeFiles/cal.dir/rule:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/cal.dir/rule
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/cal.dir/rule
 .PHONY : tools/CMakeFiles/cal.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ cal: tools/CMakeFiles/cal.dir/rule
 
 # fast build rule for target.
 cal/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/cal.dir/build.make tools/CMakeFiles/cal.dir/build
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/cal.dir/build.make tools/CMakeFiles/cal.dir/build
 .PHONY : cal/fast
 
 # Convenience name for target.
 tools/CMakeFiles/simulator.dir/rule:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/simulator.dir/rule
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/simulator.dir/rule
 .PHONY : tools/CMakeFiles/simulator.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ simulator: tools/CMakeFiles/simulator.dir/rule
 
 # fast build rule for target.
 simulator/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/simulator.dir/build.make tools/CMakeFiles/simulator.dir/build
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/simulator.dir/build.make tools/CMakeFiles/simulator.dir/build
 .PHONY : simulator/fast
 
 # Convenience name for target.
 tools/CMakeFiles/playilda.dir/rule:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/playilda.dir/rule
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/playilda.dir/rule
 .PHONY : tools/CMakeFiles/playilda.dir/rule
 
 # Convenience name for target.
@@ -152,12 +152,12 @@ playilda: tools/CMakeFiles/playilda.dir/rule
 
 # fast build rule for target.
 playilda/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/playilda.dir/build.make tools/CMakeFiles/playilda.dir/build
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/playilda.dir/build.make tools/CMakeFiles/playilda.dir/build
 .PHONY : playilda/fast
 
 # Convenience name for target.
 tools/CMakeFiles/invert.dir/rule:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/invert.dir/rule
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/invert.dir/rule
 .PHONY : tools/CMakeFiles/invert.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ invert: tools/CMakeFiles/invert.dir/rule
 
 # fast build rule for target.
 invert/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/invert.dir/build.make tools/CMakeFiles/invert.dir/build
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/invert.dir/build.make tools/CMakeFiles/invert.dir/build
 .PHONY : invert/fast
 
 cal.o: cal.c.o
@@ -176,7 +176,7 @@ cal.o: cal.c.o
 
 # target to build an object file
 cal.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/cal.dir/build.make tools/CMakeFiles/cal.dir/cal.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/cal.dir/build.make tools/CMakeFiles/cal.dir/cal.c.o
 .PHONY : cal.c.o
 
 cal.i: cal.c.i
@@ -185,7 +185,7 @@ cal.i: cal.c.i
 
 # target to preprocess a source file
 cal.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/cal.dir/build.make tools/CMakeFiles/cal.dir/cal.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/cal.dir/build.make tools/CMakeFiles/cal.dir/cal.c.i
 .PHONY : cal.c.i
 
 cal.s: cal.c.s
@@ -194,7 +194,7 @@ cal.s: cal.c.s
 
 # target to generate assembly for a file
 cal.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/cal.dir/build.make tools/CMakeFiles/cal.dir/cal.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/cal.dir/build.make tools/CMakeFiles/cal.dir/cal.c.s
 .PHONY : cal.c.s
 
 invert.o: invert.c.o
@@ -203,7 +203,7 @@ invert.o: invert.c.o
 
 # target to build an object file
 invert.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/invert.dir/build.make tools/CMakeFiles/invert.dir/invert.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/invert.dir/build.make tools/CMakeFiles/invert.dir/invert.c.o
 .PHONY : invert.c.o
 
 invert.i: invert.c.i
@@ -212,7 +212,7 @@ invert.i: invert.c.i
 
 # target to preprocess a source file
 invert.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/invert.dir/build.make tools/CMakeFiles/invert.dir/invert.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/invert.dir/build.make tools/CMakeFiles/invert.dir/invert.c.i
 .PHONY : invert.c.i
 
 invert.s: invert.c.s
@@ -221,7 +221,7 @@ invert.s: invert.c.s
 
 # target to generate assembly for a file
 invert.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/invert.dir/build.make tools/CMakeFiles/invert.dir/invert.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/invert.dir/build.make tools/CMakeFiles/invert.dir/invert.c.s
 .PHONY : invert.c.s
 
 playilda.o: playilda.c.o
@@ -230,7 +230,7 @@ playilda.o: playilda.c.o
 
 # target to build an object file
 playilda.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/playilda.dir/build.make tools/CMakeFiles/playilda.dir/playilda.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/playilda.dir/build.make tools/CMakeFiles/playilda.dir/playilda.c.o
 .PHONY : playilda.c.o
 
 playilda.i: playilda.c.i
@@ -239,7 +239,7 @@ playilda.i: playilda.c.i
 
 # target to preprocess a source file
 playilda.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/playilda.dir/build.make tools/CMakeFiles/playilda.dir/playilda.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/playilda.dir/build.make tools/CMakeFiles/playilda.dir/playilda.c.i
 .PHONY : playilda.c.i
 
 playilda.s: playilda.c.s
@@ -248,7 +248,7 @@ playilda.s: playilda.c.s
 
 # target to generate assembly for a file
 playilda.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/playilda.dir/build.make tools/CMakeFiles/playilda.dir/playilda.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/playilda.dir/build.make tools/CMakeFiles/playilda.dir/playilda.c.s
 .PHONY : playilda.c.s
 
 simulator.o: simulator.c.o
@@ -257,7 +257,7 @@ simulator.o: simulator.c.o
 
 # target to build an object file
 simulator.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/simulator.dir/build.make tools/CMakeFiles/simulator.dir/simulator.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/simulator.dir/build.make tools/CMakeFiles/simulator.dir/simulator.c.o
 .PHONY : simulator.c.o
 
 simulator.i: simulator.c.i
@@ -266,7 +266,7 @@ simulator.i: simulator.c.i
 
 # target to preprocess a source file
 simulator.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/simulator.dir/build.make tools/CMakeFiles/simulator.dir/simulator.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/simulator.dir/build.make tools/CMakeFiles/simulator.dir/simulator.c.i
 .PHONY : simulator.c.i
 
 simulator.s: simulator.c.s
@@ -275,7 +275,7 @@ simulator.s: simulator.c.s
 
 # target to generate assembly for a file
 simulator.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f tools/CMakeFiles/simulator.dir/build.make tools/CMakeFiles/simulator.dir/simulator.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f tools/CMakeFiles/simulator.dir/build.make tools/CMakeFiles/simulator.dir/simulator.c.s
 .PHONY : simulator.c.s
 
 # Help Target
@@ -313,6 +313,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

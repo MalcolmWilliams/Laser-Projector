@@ -1,1 +1,1 @@
-/usr/bin/cc  -O3 -g   CMakeFiles/simple.dir/simple.c.o  -o simple  -L/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol -rdynamic ../libol/libopenlase.so.0 -lpthread -lm -ljack -Wl,-rpath,/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol 
+/usr/bin/cc  -O3 -g   CMakeFiles/simple.dir/simple.c.o  -o simple  -L/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol -rdynamic ../libol/libopenlase.so.0 -lpthread -lm -ljack -Wl,-rpath,/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol 

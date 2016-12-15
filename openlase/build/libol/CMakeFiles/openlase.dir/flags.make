@@ -7,11 +7,11 @@ ASM_YASM_FLAGS =   -Wall
 
 ASM_YASM_DEFINES = -Dopenlase_EXPORTS
 
-ASM_YASM_INCLUDES = -I/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/include -I/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol 
+ASM_YASM_INCLUDES = -I/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/include -I/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol 
 
 C_FLAGS = -O3 -g -fPIC   -Wall
 
 C_DEFINES = -Dopenlase_EXPORTS
 
-C_INCLUDES = -I/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/include -I/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol 
+C_INCLUDES = -I/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/include -I/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol 
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase
+CMAKE_SOURCE_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build
+CMAKE_BINARY_DIR = /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol/CMakeFiles/progress.marks
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 libol/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/CMakeFiles 0
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol/CMakeFiles/progress.marks
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 libol/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 libol/clean
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 libol/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 libol/preinstall
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 libol/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 libol/preinstall
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 libol/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libol/CMakeFiles/openlase.dir/rule:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 libol/CMakeFiles/openlase.dir/rule
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f CMakeFiles/Makefile2 libol/CMakeFiles/openlase.dir/rule
 .PHONY : libol/CMakeFiles/openlase.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ openlase: libol/CMakeFiles/openlase.dir/rule
 
 # fast build rule for target.
 openlase/fast:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/build
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/build
 .PHONY : openlase/fast
 
 fontdef.o: fontdef.c.o
@@ -131,7 +131,7 @@ fontdef.o: fontdef.c.o
 
 # target to build an object file
 fontdef.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/fontdef.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/fontdef.c.o
 .PHONY : fontdef.c.o
 
 fontdef.i: fontdef.c.i
@@ -140,7 +140,7 @@ fontdef.i: fontdef.c.i
 
 # target to preprocess a source file
 fontdef.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/fontdef.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/fontdef.c.i
 .PHONY : fontdef.c.i
 
 fontdef.s: fontdef.c.s
@@ -149,7 +149,7 @@ fontdef.s: fontdef.c.s
 
 # target to generate assembly for a file
 fontdef.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/fontdef.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/fontdef.c.s
 .PHONY : fontdef.c.s
 
 ilda.o: ilda.c.o
@@ -158,7 +158,7 @@ ilda.o: ilda.c.o
 
 # target to build an object file
 ilda.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/ilda.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/ilda.c.o
 .PHONY : ilda.c.o
 
 ilda.i: ilda.c.i
@@ -167,7 +167,7 @@ ilda.i: ilda.c.i
 
 # target to preprocess a source file
 ilda.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/ilda.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/ilda.c.i
 .PHONY : ilda.c.i
 
 ilda.s: ilda.c.s
@@ -176,7 +176,7 @@ ilda.s: ilda.c.s
 
 # target to generate assembly for a file
 ilda.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/ilda.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/ilda.c.s
 .PHONY : ilda.c.s
 
 imgproc_sse2.o: imgproc_sse2.asm.o
@@ -185,7 +185,7 @@ imgproc_sse2.o: imgproc_sse2.asm.o
 
 # target to build an object file
 imgproc_sse2.asm.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/imgproc_sse2.asm.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/imgproc_sse2.asm.o
 .PHONY : imgproc_sse2.asm.o
 
 libol.o: libol.c.o
@@ -194,7 +194,7 @@ libol.o: libol.c.o
 
 # target to build an object file
 libol.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/libol.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/libol.c.o
 .PHONY : libol.c.o
 
 libol.i: libol.c.i
@@ -203,7 +203,7 @@ libol.i: libol.c.i
 
 # target to preprocess a source file
 libol.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/libol.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/libol.c.i
 .PHONY : libol.c.i
 
 libol.s: libol.c.s
@@ -212,7 +212,7 @@ libol.s: libol.c.s
 
 # target to generate assembly for a file
 libol.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/libol.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/libol.c.s
 .PHONY : libol.c.s
 
 text.o: text.c.o
@@ -221,7 +221,7 @@ text.o: text.c.o
 
 # target to build an object file
 text.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/text.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/text.c.o
 .PHONY : text.c.o
 
 text.i: text.c.i
@@ -230,7 +230,7 @@ text.i: text.c.i
 
 # target to preprocess a source file
 text.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/text.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/text.c.i
 .PHONY : text.c.i
 
 text.s: text.c.s
@@ -239,7 +239,7 @@ text.s: text.c.s
 
 # target to generate assembly for a file
 text.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/text.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/text.c.s
 .PHONY : text.c.s
 
 trace.o: trace.c.o
@@ -248,7 +248,7 @@ trace.o: trace.c.o
 
 # target to build an object file
 trace.c.o:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/trace.c.o
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/trace.c.o
 .PHONY : trace.c.o
 
 trace.i: trace.c.i
@@ -257,7 +257,7 @@ trace.i: trace.c.i
 
 # target to preprocess a source file
 trace.c.i:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/trace.c.i
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/trace.c.i
 .PHONY : trace.c.i
 
 trace.s: trace.c.s
@@ -266,7 +266,7 @@ trace.s: trace.c.s
 
 # target to generate assembly for a file
 trace.c.s:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/trace.c.s
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(MAKE) -f libol/CMakeFiles/openlase.dir/build.make libol/CMakeFiles/openlase.dir/trace.c.s
 .PHONY : trace.c.s
 
 # Help Target
@@ -305,6 +305,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

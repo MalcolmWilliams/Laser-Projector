@@ -1,4 +1,4 @@
-# Install script for directory: /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools
+# Install script for directory: /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/qplayvid/cmake_install.cmake")
+  include("/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/qplayvid/cmake_install.cmake")
 
 endif()
 

@@ -13,12 +13,26 @@ Venv
 Twitter
 +++++++
 If you need to setup your own Twitter API tokens, follow the instructions here: http://socialmedia-class.org/twittertutorial.html
+If the twtter librars is not recognized you can reinstall it with the following:
+1. ``cd twitter_functions/twitter-1.17.1/``
+2. ``python setup.py build``
+3. ``python setup.py install``
+4. Verify with ``pip freeze | grep twitter``
 
 
 Openlase
 ++++++++
 | Follow the instructions here: https://github.com/marcan/openlase/wiki/Installation
 | *Note:* This for reference only because I should be including all the compiled files in the project. 
+
+
+qjackctl
+++++++++
+1. Install with ``sudo apt-get -y install qjackctl``
+2. load defaults file `` ``
+3. load patchbay defaults file ``Dual_Lasershark_0.xml``
+More instructions here: https://github.com/marcan/openlase/wiki/JACK_and_Openlase_Configuration
+
 
 
 Usage
@@ -37,13 +51,13 @@ Documentation:
 
 To update/push documentation changes:
 +++++++++++++++++++++++++++++++++++++
-| 1. Make changes to docstrings in code
-| 2. Navigate to docs directory
-| 3. Generate new html with: ``make html`` (make sure you have activated ``venv``)
-| 4. Add the changes: ``git add .``
-| 4. Commit the changes: ``git commit -m "this is an example commit"``
-| 5. Push the changes to the github pages branch: ``git subtree push --prefix docs/_build/html origin gh-pages``
-| *Note:* an alias can be made in your gitconfig file if you are lazy
+1. Make changes to docstrings in code
+2. Navigate to docs directory
+3. Generate new html with: ``make html`` (make sure you have activated ``venv``)
+4. Add the changes: ``git add .``
+5. Commit the changes: ``git commit -m "this is an example commit"``
+6. Push the changes to the github pages branch: ``git subtree push --prefix docs/_build/html origin gh-pages``
+*Note:* an alias can be made in your gitconfig file if you are lazy
 
 
 Lasershark protocol

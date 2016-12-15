@@ -1,4 +1,4 @@
-# Install script for directory: /home/malcolm/Coding/Khazanah/Laser-Projector/openlase/python
+# Install script for directory: /home/malcolm/Coding/Khazanah/Laser-Writer/openlase/python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

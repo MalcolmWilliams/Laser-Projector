@@ -10,9 +10,9 @@
 stdint.h
 -
 
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/examples/midiview.c
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/examples/midiview.c
 libol.h
-/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/examples/libol.h
+/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/examples/libol.h
 stdio.h
 -
 errno.h

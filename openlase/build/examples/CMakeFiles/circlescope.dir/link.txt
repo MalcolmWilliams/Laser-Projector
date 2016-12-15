@@ -1,1 +1,1 @@
-/usr/bin/cc  -O3 -g   CMakeFiles/circlescope.dir/circlescope.c.o  -o circlescope  -L/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol -rdynamic -ljack -lm -Wl,-rpath,/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/libol 
+/usr/bin/cc  -O3 -g   CMakeFiles/circlescope.dir/circlescope.c.o  -o circlescope  -L/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol -rdynamic -ljack -lm -Wl,-rpath,/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/libol 

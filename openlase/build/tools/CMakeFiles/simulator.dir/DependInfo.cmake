@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/tools/simulator.c" "/home/malcolm/Coding/Khazanah/Laser-Projector/openlase/build/tools/CMakeFiles/simulator.dir/simulator.c.o"
+  "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/tools/simulator.c" "/home/malcolm/Coding/Khazanah/Laser-Writer/openlase/build/tools/CMakeFiles/simulator.dir/simulator.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
