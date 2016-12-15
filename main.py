@@ -86,10 +86,11 @@ class Laser_Writer:
         for i in range(len(tweet)):     #one per laser.
             #for i in range(1):     #for testing speed on a single laser.
 
-            if(i == 0): justification = 'r'
-            elif(i == len(tweet)-1): justification = 'l'
-            else: justification = 'c' #this should be changed to full justification and not centered. will never be used. 
+
+            if(i == 0): justification = 'b' #first laser is bottom justified
+            else: justification = 't' #second laser is top justified 
             
+
             cmd = cmd_start + str(tweet[i]) + " --time_display  " + str(time_display) + " --justification " + justification + cmd_end
             #print cmd
             os.system(cmd)
@@ -148,9 +149,9 @@ class Laser_Writer:
 
         test_string = "1234567890 "
         for i in range(14):
-            #temp = test_string*(i+1)
-            temp = test_string*(9)
-            self.write_tweet(temp, 10)
+            temp = test_string*(i+1)
+            #temp = test_string*(9)
+            self.write_tweet(temp, 2)
         
 
 if(__name__ == "__main__"):

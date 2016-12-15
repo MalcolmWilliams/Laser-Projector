@@ -56,12 +56,21 @@ class Laser_Format:
         message = self.segment_message(message)      #this divides the tweet into lines that are the right lenght for the laser. 
 
         #now the message needs to be divided even further so it is ready for each laser.
-        #simply alternate. 
-        #note: something might have to be done for the justification. 
-        i = cycle(range(self.num_lasers))
+
+        #if the lasers are arranged horizontally, alternate. 
+        #i = cycle(range(self.num_lasers))
+        #if they are vertical, half go to first laser, half to second.
+        count = 0
+        i = 0
+
         formatted_message = [[],[]]
         for line in message:
-            formatted_message[i.next()].append(line)
+            #formatted_message[i.next()].append(line)
+            formatted_message[i].append(line)
+            count += 1
+            if ( (count + 1) > len(message)/2):
+                i = 1            
+
 
         #print formatted_message
         return formatted_message

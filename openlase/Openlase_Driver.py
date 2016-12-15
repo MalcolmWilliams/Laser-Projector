@@ -120,12 +120,12 @@ class Openlase_Driver:
         deviation = 70 #deviation for min/max in terms of percentage.
         on_speed_arr = self.get_deviation_arr(params.on_speed, 200)
         off_speed_arr = self.get_deviation_arr(params.off_speed, 200)
-        start_wait_arr = self.get_deviation_arr(params.start_wait, 70)#50
-        start_dwell_arr = self.get_deviation_arr(params.start_dwell, 70)#50
+        start_wait_arr = self.get_deviation_arr(params.start_wait, 50)#50
+        start_dwell_arr = self.get_deviation_arr(params.start_dwell, 50)#50
         curve_dwell_arr = self.get_deviation_arr(params.curve_dwell, deviation)
         corner_dwell_arr = self.get_deviation_arr(params.corner_dwell, deviation)
-        end_dwell_arr = self.get_deviation_arr(params.end_dwell, 70)
-        end_wait_arr = self.get_deviation_arr(params.end_wait, 70)#70
+        end_dwell_arr = self.get_deviation_arr(params.end_dwell, 50)
+        end_wait_arr = self.get_deviation_arr(params.end_wait, 50)#70
         #max_framelen_arr = self.get_deviation_arr(params.max_framelen,deviation)
 
 
@@ -190,8 +190,13 @@ class Openlase_Driver:
         t_end = t.time() + time_display
         while(t.time() < t_end):
 
-            #tweet_segments = self.segment_message(tweet_string)
-            line_height = 0.9
+            if (justification == 't'):
+                line_height = 0.9
+                height_change = -0.2
+            elif(justification == 'b'):
+                line_height = -0.7
+                height_change = 0.2
+
 
             #Maybe can be moved to init?
             ol.loadIdentity3()
@@ -201,16 +206,9 @@ class Openlase_Driver:
             for line in tweet_segments:
                 line = line.lstrip()
                 w = ol.getStringWidth(self.font, 0.2, line)
-                #centeri: -w/2
-                #left: -1
-                #right: 1-w
-                #ol.drawString(self.font, (-w/2, line_height), 0.2, ol.C_WHITE, line)
-                if(justification == 'c'): horiz_start = -w/2
-                elif(justification == 'l'): horiz_start = -1
-                elif(justification == 'r'): horiz_start = 1-w
+                horiz_start = -w/2
                 ol.drawString(self.font, (horiz_start, line_height), 0.2, ol.C_WHITE, line)
-                line_height -= 0.2
-            line_height = 0.5
+                line_height += height_change
 
             #not entirely sure what the perspective and translation does. 
             ol.perspective(60, 1, 1, 100)
