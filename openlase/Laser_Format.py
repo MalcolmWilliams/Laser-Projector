@@ -53,6 +53,7 @@ class Laser_Format:
         """
         #message = "List contating the speeds of each laser galvo pair (in pps). The number of characters that can be displayed is derived from this."  #test string
         message = message.encode('ascii', 'ignore') #openlase library can only take ascii data
+        message = message.replace('"', "'")#workaround for double quotes and single quotes together causeign a bash crash. only needed because of the stupid was multiple lasers have to be handled
         message = self.segment_message(message)      #this divides the tweet into lines that are the right lenght for the laser. 
 
         #now the message needs to be divided even further so it is ready for each laser.

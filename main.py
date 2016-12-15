@@ -88,8 +88,8 @@ class Laser_Writer:
             #for i in range(1):     #for testing speed on a single laser.
 
 
-            if(i == 0): justification = 'b' #first laser is bottom justified
-            else: justification = 't' #second laser is top justified 
+            if(i == 0): justification = "b" #first laser is bottom justified
+            else: justification = "t" #second laser is top justified 
             
 
             cmd = cmd_start + str(tweet[i]) + " --time_display  " + str(time_display) + " --justification " + justification + cmd_end
@@ -130,7 +130,7 @@ class Laser_Writer:
             while(True):
                 print("====================================================")
                 print "Selecting a new random tweet"
-                self.write_tweet(self.st.get_random_tweet_text(), 5)
+                self.write_tweet(self.st.get_random_tweet_text(), 10)
         
         except KeyboardInterrupt:
             pass
@@ -140,7 +140,7 @@ class Laser_Writer:
                 #get the users message:
                 print("====================================================")
                 message = raw_input("Enter the desired message: ") 
-                self.write_tweet(message, 5)
+                self.write_tweet(message, 10)
         except KeyboardInterrupt:
             pass 
         '''
