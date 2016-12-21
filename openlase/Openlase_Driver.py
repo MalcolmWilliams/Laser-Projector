@@ -96,7 +96,7 @@ class Openlase_Driver:
         int max_framelen;
         '''
  
-        self.update_params()
+        #self.update_params()
         
         #logging.info("\ton_speed\t" + str(params.on_speed))
         #logging.info("\toff_speed\t" + str(params.off_speed))
