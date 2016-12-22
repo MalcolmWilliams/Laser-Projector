@@ -38,11 +38,10 @@ More instructions here: https://github.com/marcan/openlase/wiki/JACK_and_Openlas
 
 Usage
 =====
-1. Run ``./start_ol_services`` This will start all of the openlase and jack utilities (output control, jack, simulator, lasershark_jack)
+1. Run ``./start_ol_services`` This will start all of the openlase and jack utilities (output control, jack, simulator, lasershark_jack)  *Note:* You might need to click the patchbay button in JACK and activate all the connections (see the jack tutorial for setting up the connections)
 2. Enter the venv enviroment: ``source venv/bin/activate``
 3. Run the main.py file ``python main.py``
-4. You might need to click the patchbay button in JACK and activate all the connections (see the jack tutorial for setting up the connections)
-5. Multiple windows will be open. The output controls must be configured similar to the below image to blend the two lasers together.
+4. Multiple windows will be open. The output controls must be configured similar to the below image to blend the two lasers together.
 
 .. image:: Laser_output_configuration.png
 
@@ -51,7 +50,7 @@ Documentation:
 =================
 | The documentation managed through sphinx. 
 | The documentation is hosted with github pages.
-| The documentations is available `here <https://malcolmwilliams.github.io/Laser-Writer/>`_
+| The documentations is available `here <https://rekon.xyz/Laser-Writer/>`_
 
 To update/push documentation changes:
 +++++++++++++++++++++++++++++++++++++
