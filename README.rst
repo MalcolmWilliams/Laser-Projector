@@ -31,6 +31,7 @@ qjackctl
 1. Install with ``sudo apt-get -y install qjackctl``
 2. load defaults file `` ``
 3. load patchbay defaults file ``Dual_Lasershark_0.xml``
+
 More instructions here: https://github.com/marcan/openlase/wiki/JACK_and_Openlase_Configuration
 
 
