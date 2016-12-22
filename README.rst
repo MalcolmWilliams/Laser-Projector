@@ -1,15 +1,29 @@
 Laser-Writer
 ************
 
+Usage
+=====
+1. from the main directory, run ``./start_ol_services`` This will start all of the openlase and jack utilities (output control, jack, simulator, lasershark_jack)  *Note:* You might need to click the patchbay button in JACK and activate all the connections (see the jack tutorial for setting up the connections)
+2. Enter the venv enviroment: ``source venv/bin/activate`` If you wish to deactivate venv when you are done, type ``deactivate``
+3. Run the main.py file ``python main.py`` This program will demo two features. Firstly it will randomly select tweets from CNN and display them for 10 seconds. Once you hit ``ctrl-c`` it will allow the user to type a message directly into the terminal. Hit ``ctrl-c`` again to exit.
+4. Multiple windows will be open. The output controls must be configured similar to the below image to blend the two lasers together.
+
+.. image:: Laser_output_configuration.png
+
+
 Installation
 ============
+
+This has been tested on Ubuntu 16.04, python 2.7.10
+There are numerous dependencies, each topic covers its own dependencies
 
 Venv
 ++++
 | 1. You will need to install venv ``pip install virtualenv --user`` or ``sudo apt-get install python-virtualenv``
 | 2. Then activate venv before working on the project ``source venv/bin/activate``
 | *Note:* Venv makes managing the python dependancies much easier. Flask offers a good explanation of venv here: http://flask.pocoo.org/docs/0.11/installation/
-
+  
+  
 Twitter
 +++++++
 If you need to setup your own Twitter API tokens, follow the instructions here: http://socialmedia-class.org/twittertutorial.html
@@ -24,7 +38,7 @@ Openlase
 ++++++++
 | Follow the instructions here: https://github.com/marcan/openlase/wiki/Installation
 | *Note:* This for reference only because I should be including all the compiled files in the project. 
-
+ 
 
 qjackctl
 ++++++++
@@ -33,17 +47,6 @@ qjackctl
 3. load patchbay defaults file ``Dual_Lasershark_0.xml``
 
 More instructions here: https://github.com/marcan/openlase/wiki/JACK_and_Openlase_Configuration
-
-
-
-Usage
-=====
-1. Run ``./start_ol_services`` This will start all of the openlase and jack utilities (output control, jack, simulator, lasershark_jack)  *Note:* You might need to click the patchbay button in JACK and activate all the connections (see the jack tutorial for setting up the connections)
-2. Enter the venv enviroment: ``source venv/bin/activate``
-3. Run the main.py file ``python main.py``
-4. Multiple windows will be open. The output controls must be configured similar to the below image to blend the two lasers together.
-
-.. image:: Laser_output_configuration.png
 
 
 Documentation:
